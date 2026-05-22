@@ -11,7 +11,7 @@ const SITE_DESCRIPTION = 'A quick and free guide for learning Japanese';
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Guides', href: '/docs/guide' },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Resources', href: '/docs/resources' },
 ];
 
 const HERO_BADGE = 'Absolute beginner guide';

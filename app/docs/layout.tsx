@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             <Link href="/docs/guide" className="text-fd-muted-foreground hover:text-fd-foreground transition-colors">
               Guides
             </Link>
-            <Link href="/resources" className="text-fd-muted-foreground hover:text-fd-foreground transition-colors">
+            <Link href="/docs/resources" className="text-fd-muted-foreground hover:text-fd-foreground transition-colors">
               Resources
             </Link>
           </div>
