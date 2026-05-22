@@ -149,8 +149,8 @@ const FOOTER_COL_3 = {
 const FOOTER_COL_4 = {
   heading: 'Community',
   links: [
-    { label: 'Join Discord', href: DISCORD_INVITE },
-    { label: 'GitHub', href: GITHUB_URL },
+    { label: 'Join Discord', href: 'https://discord.gg/jpacademy' },
+    { label: 'GitHub', href: 'https://github.com/TSCDelta/VoltsGuide' },
   ],
 };
 
