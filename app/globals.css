@@ -51,14 +51,23 @@
 @layer components {
 
   /* ── Layout ──────────────────────────────────────────────── */
+  /*
+   * Fumadocs already provides a left sidebar + right TOC column.
+   * .guide-layout lives inside the Fumadocs "main content" area,
+   * so we use a simple flex row: the guide sidebar floats to the
+   * left of guide-main without fighting the outer chrome.
+   * On mobile the sidebar collapses above the content.
+   */
   .guide-layout {
-    @apply grid min-h-screen;
-    grid-template-columns: 220px 1fr;
+    @apply flex min-h-screen items-start;
   }
 
   /* ── Sidebar ─────────────────────────────────────────────── */
   .guide-sidebar {
-    @apply sticky top-0 h-screen overflow-y-auto px-[10px] py-[18px];
+    @apply sticky shrink-0 overflow-y-auto px-[10px] py-[18px];
+    top: 64px;               /* clear the Fumadocs topbar */
+    width: 200px;
+    max-height: calc(100vh - 64px);
     background: var(--guide-bg2);
     border-right: 1px solid var(--guide-border);
     scrollbar-width: thin;
@@ -132,7 +141,8 @@
 
   /* ── Main content ────────────────────────────────────────── */
   .guide-main {
-    @apply min-w-0 px-[30px] py-[28px];
+    @apply flex-1 min-w-0 px-[36px] py-[28px];
+    max-width: 780px;
   }
 
   /* ── Helpers ─────────────────────────────────────────────── */
@@ -396,14 +406,19 @@
   }
 
   /* ── Responsive ──────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .guide-sidebar {
+      display: none;          /* Fumadocs mobile nav takes over */
+    }
+    .guide-main {
+      @apply px-5 py-5;
+      max-width: 100%;
+    }
+  }
+
   @media (max-width: 768px) {
     .guide-layout {
-      grid-template-columns: 1fr;
-    }
-    .guide-sidebar {
-      @apply static h-auto;
-      border-right: none;
-      border-bottom: 1px solid var(--guide-border);
+      @apply flex-col;
     }
     .guide-main {
       @apply px-4 py-5;
