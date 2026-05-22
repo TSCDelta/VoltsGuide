@@ -21,14 +21,12 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
   const MDX = page.data.body;
 
+  // full=true removes Fumadocs' own content max-width so our
+  // guide-layout can use the entire available width.
   return (
-    <DocsPage
-      toc={page.data.toc}
-      full
-    >
+    <DocsPage toc={page.data.toc} full>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
-
       <DocsBody>
         <MDX components={{ ...defaultMdxComponents }} />
       </DocsBody>
@@ -42,11 +40,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
-
   const page = source.getPage(slug);
-
   if (!page) notFound();
-
   return {
     title: page.data.title,
     description: page.data.description,

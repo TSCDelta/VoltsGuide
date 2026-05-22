@@ -42,13 +42,26 @@
 
 /* ─────────────────────────────────────────────────────────────
    FUMADOCS CONTENT WIDTH OVERRIDE
-   Fumadocs caps the article/prose area at ~65ch by default.
-   Override it so the guide page uses all available space.
+   Target every known Fumadocs content wrapper and prose
+   container to remove the default max-width cap.
 ───────────────────────────────────────────────────────────── */
-article.fd-content,
-.fd-article,
-[data-full-width] article,
-.prose {
+.nd-article,
+.nd-page,
+article,
+[class*="article"],
+[class*="content"],
+[class*="prose"],
+.prose,
+.prose-sm,
+.prose-base,
+.prose-lg {
+  max-width: none !important;
+}
+
+/* Also ensure the direct parent of guide-main has no max-width */
+.guide-main,
+.guide-main > *,
+.guide-layout {
   max-width: none !important;
 }
 
@@ -71,16 +84,26 @@ article.fd-content,
    * On mobile the sidebar collapses above the content.
    */
   .guide-layout {
-    @apply flex min-h-screen items-start;
+    @apply flex items-start;
+    min-height: 100vh;
   }
 
   /* ── Sidebar ─────────────────────────────────────────────── */
-  /*
-   * Fumadocs renders its own left sidebar with the page tree.
-   * .guide-sidebar duplicates that nav, so hide it entirely and
-   * let Fumadocs handle navigation.
-   */
-  .guide-sidebar { display: none; }
+  .guide-sidebar {
+    @apply sticky shrink-0 overflow-y-auto px-[10px] py-[18px];
+    top: 64px;
+    width: 220px;
+    max-height: calc(100vh - 64px);
+    background: var(--guide-bg2);
+    border-right: 1px solid var(--guide-border);
+    scrollbar-width: thin;
+    scrollbar-color: var(--guide-border2) transparent;
+  }
+  .guide-sidebar::-webkit-scrollbar { width: 4px; }
+  .guide-sidebar::-webkit-scrollbar-thumb {
+    background: var(--guide-border2);
+    border-radius: 4px;
+  }
 
   .guide-sidebar-label {
     @apply block px-[10px] mb-2 text-[10px] font-bold uppercase tracking-widest;
@@ -426,11 +449,11 @@ article.fd-content,
   /* ── Responsive ──────────────────────────────────────────── */
   @media (max-width: 1024px) {
     .guide-sidebar {
-      display: none;          /* Fumadocs mobile nav takes over */
+      display: none;
     }
     .guide-main {
-      @apply px-5 py-5;
-      max-width: 100%;
+      padding-left: 24px;
+      padding-right: 24px;
     }
   }
 
