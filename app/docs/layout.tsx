@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: ReactNode }) {
     <DocsLayout
       tree={source.pageTree}
       nav={{
-        title: 'My Club',
+        title: 'Volts Guide',
         children: (
           <div className="flex items-center gap-4 text-sm ml-4">
             <Link href="/" className="text-fd-muted-foreground hover:text-fd-foreground transition-colors">
