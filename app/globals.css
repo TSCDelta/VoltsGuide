@@ -18,4 +18,399 @@
   --fd-accent-foreground: 215 30% 8%;
   
   --fd-gold: 48 92% 68%;           /* Gold highlights */
+
+  /* ── Guide page tokens ──────────────────────────────────────
+     Derived from the Fumadocs palette above. Kept as separate
+     variables so the guide MDX classes stay self-contained and
+     don't break if Fumadocs variable names ever change.        */
+  --guide-bg:        hsl(215, 28%, 6%);
+  --guide-bg2:       hsl(217, 25%, 10%);
+  --guide-bg3:       hsl(220, 25%, 12%);
+  --guide-bg4:       hsl(218, 22%, 15%);
+  --guide-border:    hsl(215, 20%, 18%);
+  --guide-border2:   hsl(215, 20%, 24%);
+  --guide-text:      hsl(210, 20%, 95%);
+  --guide-text2:     hsl(215, 15%, 65%);
+  --guide-text3:     hsl(215, 15%, 45%);
+  --guide-primary:   hsl(355, 85%, 62%);
+  --guide-primary-d: hsl(355, 75%, 48%);
+  --guide-accent:    hsl(200, 88%, 58%);
+  --guide-gold:      hsl(48,  92%, 68%);
+  --guide-green:     hsl(150, 60%, 45%);
+  --guide-orange:    hsl(25,  85%, 58%);
 }
+
+/* ─────────────────────────────────────────────────────────────
+   GUIDE PAGE COMPONENTS
+   All classes are prefixed "guide-" to avoid collisions with
+   Fumadocs internals. Everything that can't be expressed as a
+   plain Tailwind utility lives here: pseudo-elements, complex
+   descendant selectors, counter rules, scrollbar styles, and
+   gradients with precise arbitrary values.
+───────────────────────────────────────────────────────────── */
+@layer components {
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  .guide-layout {
+    @apply grid min-h-screen;
+    grid-template-columns: 220px 1fr;
+  }
+
+  /* ── Sidebar ─────────────────────────────────────────────── */
+  .guide-sidebar {
+    @apply sticky top-0 h-screen overflow-y-auto px-[10px] py-[18px];
+    background: var(--guide-bg2);
+    border-right: 1px solid var(--guide-border);
+    scrollbar-width: thin;
+    scrollbar-color: var(--guide-border2) transparent;
+  }
+  .guide-sidebar::-webkit-scrollbar { width: 4px; }
+  .guide-sidebar::-webkit-scrollbar-thumb {
+    background: var(--guide-border2);
+    @apply rounded;
+  }
+
+  .guide-sidebar-label {
+    @apply block px-[10px] mb-2 text-[10px] font-bold uppercase tracking-widest;
+    color: var(--guide-text3);
+  }
+
+  .guide-nav-item {
+    @apply flex items-center gap-[9px] px-[10px] py-[7px] mb-px rounded-lg
+           text-[12.5px] no-underline border border-transparent
+           transition-all duration-150;
+    color: var(--guide-text2);
+  }
+  .guide-nav-item:hover {
+    @apply no-underline;
+    background: var(--guide-bg3);
+    color: var(--guide-text);
+  }
+  .guide-nav-item--active {
+    background: hsla(355, 85%, 62%, 0.12);
+    color: var(--guide-primary);
+    border-color: hsla(355, 85%, 62%, 0.25);
+  }
+  .guide-nav-item--active .guide-nav-num {
+    background: var(--guide-primary);
+    @apply text-white;
+  }
+
+  .guide-nav-num {
+    @apply flex items-center justify-center shrink-0 rounded-full
+           text-[10px] font-bold;
+    width: 20px;
+    height: 20px;
+    background: var(--guide-bg4);
+    color: var(--guide-text3);
+  }
+
+  .guide-nav-connector {
+    @apply ml-[19px];
+    width: 1px;
+    height: 12px;
+    background: var(--guide-border);
+  }
+
+  .guide-nav-sub {
+    @apply block mb-px rounded-[5px] text-[11px] no-underline
+           transition-all duration-150;
+    padding: 3px 10px 3px 39px;
+    color: var(--guide-text3);
+  }
+  .guide-nav-sub:hover {
+    @apply no-underline;
+    color: var(--guide-text2);
+    background: var(--guide-bg3);
+  }
+
+  .guide-nav-divider {
+    @apply my-[10px] mx-[6px];
+    height: 1px;
+    background: var(--guide-border);
+  }
+
+  /* ── Main content ────────────────────────────────────────── */
+  .guide-main {
+    @apply min-w-0 px-[30px] py-[28px];
+  }
+
+  /* ── Helpers ─────────────────────────────────────────────── */
+  .guide-anchor {
+    @apply block invisible relative;
+    top: -80px;
+  }
+
+  .guide-divider {
+    @apply my-8;
+    height: 1px;
+    background: var(--guide-border);
+  }
+
+  .guide-intro {
+    @apply text-[13.5px] leading-[1.75] mb-4;
+    color: var(--guide-text2);
+  }
+  .guide-intro strong { color: var(--guide-text); }
+
+  .guide-footer {
+    @apply text-center text-[12px] py-6;
+    color: var(--guide-text3);
+  }
+
+  /* ── Step headers ────────────────────────────────────────── */
+  .guide-step-header {
+    @apply flex items-center gap-[14px] mb-[14px];
+  }
+
+  .guide-step-icon {
+    @apply flex items-center justify-center shrink-0 rounded-[11px] text-[22px];
+    width: 42px;
+    height: 42px;
+  }
+  .guide-step-icon--red    { background: hsla(355, 85%, 62%, 0.15); }
+  .guide-step-icon--blue   { background: hsla(200, 88%, 58%, 0.15); }
+  .guide-step-icon--green  { background: hsla(150, 60%, 45%, 0.15); }
+  .guide-step-icon--gold   { background: hsla(48,  92%, 68%, 0.15); }
+  .guide-step-icon--purple { background: hsla(265, 70%, 65%, 0.15); }
+  .guide-step-icon--orange { background: hsla(25,  85%, 58%, 0.15); }
+
+  .guide-step-title {
+    @apply m-0 text-[18px] font-bold;
+    color: var(--guide-text);
+  }
+  .guide-step-sub {
+    @apply m-0 mt-[2px] text-[12px];
+    color: var(--guide-text2);
+  }
+
+  /* ── Card ────────────────────────────────────────────────── */
+  .guide-card {
+    @apply rounded-[12px] p-5 mb-4;
+    background: var(--guide-bg2);
+    border: 1px solid var(--guide-border);
+  }
+  .guide-card p {
+    @apply text-[13px] leading-[1.75] mb-3;
+    color: var(--guide-text2);
+  }
+  .guide-card p:last-child { @apply mb-0; }
+  .guide-card strong { color: var(--guide-text); }
+
+  /* ── Stage cards ─────────────────────────────────────────── */
+  .guide-stage {
+    @apply rounded-[14px] p-5 mb-4;
+  }
+  .guide-stage--blue {
+    border: 1px solid hsla(200, 88%, 58%, 0.25);
+    background: linear-gradient(135deg, hsl(215, 45%, 12%), hsl(215, 28%, 8%));
+  }
+  .guide-stage--green {
+    border: 1px solid hsla(150, 60%, 45%, 0.25);
+    background: linear-gradient(135deg, hsl(150, 40%, 9%), hsl(215, 28%, 6%));
+  }
+  .guide-stage--orange {
+    border: 1px solid hsla(25, 85%, 58%, 0.25);
+    background: linear-gradient(135deg, hsl(25, 40%, 11%), hsl(215, 28%, 7%));
+  }
+
+  .guide-stage-header {
+    @apply flex items-center gap-[10px] mb-3;
+  }
+  .guide-stage-emoji { @apply text-[20px]; }
+
+  .guide-stage-title {
+    @apply m-0 text-[14px] font-bold;
+  }
+  .guide-stage--blue   .guide-stage-title { color: var(--guide-accent); }
+  .guide-stage--green  .guide-stage-title { color: var(--guide-green); }
+  .guide-stage--orange .guide-stage-title { color: var(--guide-orange); }
+
+  .guide-stage-timing {
+    @apply m-0 mt-px text-[11px];
+  }
+  .guide-stage--blue   .guide-stage-timing { color: hsla(200, 88%, 58%, 0.7); }
+  .guide-stage--green  .guide-stage-timing { color: hsla(150, 60%, 45%, 0.7); }
+  .guide-stage--orange .guide-stage-timing { color: hsla(25,  85%, 58%, 0.7); }
+
+  .guide-stage-body {
+    @apply text-[12.5px] leading-[1.7] mb-3;
+  }
+  .guide-stage--blue   .guide-stage-body { color: hsla(200, 88%, 90%, 0.75); }
+  .guide-stage--green  .guide-stage-body { color: hsla(150, 60%, 90%, 0.75); }
+  .guide-stage--orange .guide-stage-body { color: hsla(25,  85%, 90%, 0.75); }
+
+  .guide-stage-list {
+    @apply list-none m-0 pt-3 border-t border-solid;
+  }
+  .guide-stage--blue   .guide-stage-list { border-color: hsla(200, 88%, 58%, 0.15); }
+  .guide-stage--green  .guide-stage-list { border-color: hsla(150, 60%, 45%, 0.15); }
+  .guide-stage--orange .guide-stage-list { border-color: hsla(25,  85%, 58%, 0.15); }
+
+  .guide-stage-list li { @apply text-[12px] py-[3px]; }
+  .guide-stage--blue   .guide-stage-list li { color: hsla(200, 88%, 85%, 0.65); }
+  .guide-stage--green  .guide-stage-list li { color: hsla(150, 60%, 85%, 0.65); }
+  .guide-stage--orange .guide-stage-list li { color: hsla(25,  85%, 85%, 0.65); }
+
+  /* ── Script grid ─────────────────────────────────────────── */
+  .guide-script-grid {
+    @apply grid gap-[10px] mb-4;
+    grid-template-columns: 1fr 1fr;
+  }
+  .guide-script-card {
+    @apply rounded-[9px] p-[12px_14px] transition-colors duration-200;
+    background: var(--guide-bg3);
+    border: 1px solid var(--guide-border);
+  }
+  .guide-script-card:hover { border-color: var(--guide-border2); }
+
+  .guide-script-title {
+    @apply font-bold text-[13px] mb-[3px];
+    color: var(--guide-primary);
+  }
+  .guide-script-desc {
+    @apply m-0 text-[11px];
+    color: var(--guide-text3);
+  }
+
+  /* ── Bullet list ─────────────────────────────────────────── */
+  .guide-bullet-list {
+    @apply list-none p-0 my-2;
+  }
+  .guide-bullet-list li {
+    @apply flex items-start gap-2 py-[6px] text-[13px];
+    color: var(--guide-text2);
+    border-bottom: 1px solid var(--guide-border);
+  }
+  .guide-bullet-list li:last-child { @apply border-b-0; }
+  .guide-bullet-list li::before {
+    content: '•';
+    @apply shrink-0;
+    color: var(--guide-primary);
+  }
+  .guide-bullet-list strong { color: var(--guide-text); }
+
+  /* ── Numbered steps list ─────────────────────────────────── */
+  .guide-steps-list {
+    @apply list-none p-0 m-0;
+    counter-reset: guide-step;
+  }
+  .guide-steps-list li {
+    @apply flex items-start gap-3 py-2 text-[13px];
+    color: var(--guide-text2);
+    border-bottom: 1px solid var(--guide-border);
+    counter-increment: guide-step;
+  }
+  .guide-steps-list li:last-child { @apply border-b-0; }
+  .guide-steps-list li::before {
+    content: counter(guide-step);
+    @apply flex items-center justify-center shrink-0 rounded-full
+           text-[11px] font-bold;
+    width: 22px;
+    height: 22px;
+    background: var(--guide-bg4);
+    color: var(--guide-accent);
+  }
+  .guide-steps-list strong { color: var(--guide-text); }
+
+  /* ── Infobox ─────────────────────────────────────────────── */
+  .guide-infobox {
+    @apply rounded-[12px] p-[18px_20px] my-4;
+    background: var(--guide-bg2);
+    border: 1px solid var(--guide-border);
+  }
+  .guide-infobox-header {
+    @apply flex items-center gap-[10px] mb-[10px];
+  }
+  .guide-infobox-emoji { @apply text-[20px]; }
+  .guide-infobox-title {
+    @apply m-0 text-[14px] font-bold;
+    color: var(--guide-accent);
+  }
+  .guide-infobox p {
+    @apply text-[12.5px] leading-[1.75] mb-[10px];
+    color: hsla(200, 20%, 88%, 0.75);
+  }
+  .guide-infobox p:last-child { @apply mb-0; }
+  .guide-infobox strong { color: var(--guide-text); }
+
+  /* ── Routine box ─────────────────────────────────────────── */
+  .guide-routine {
+    @apply rounded-[12px] p-[18px_20px] my-4;
+  }
+  .guide-routine--blue {
+    border: 1px solid hsla(215, 80%, 60%, 0.2);
+    background: linear-gradient(135deg, hsl(215, 40%, 10%), hsl(215, 28%, 7%));
+  }
+  .guide-routine--green {
+    border: 1px solid hsla(150, 60%, 45%, 0.2);
+    background: linear-gradient(135deg, hsl(150, 35%, 9%), hsl(215, 28%, 6%));
+  }
+  .guide-routine--orange {
+    border: 1px solid hsla(25, 85%, 58%, 0.2);
+    background: linear-gradient(135deg, hsl(25, 35%, 10%), hsl(215, 28%, 6%));
+  }
+
+  .guide-routine-header {
+    @apply flex items-center gap-[10px] mb-3 text-[20px];
+  }
+  .guide-routine-title {
+    @apply m-0 text-[13px] font-bold;
+  }
+  .guide-routine--blue   .guide-routine-title { color: hsl(215, 80%, 75%); }
+  .guide-routine--green  .guide-routine-title { color: var(--guide-green); }
+  .guide-routine--orange .guide-routine-title { color: var(--guide-orange); }
+
+  .guide-routine-list {
+    @apply list-none p-0 m-0;
+  }
+  .guide-routine-list li {
+    @apply flex items-start gap-[7px] text-[12.5px] py-1;
+  }
+  .guide-routine--blue   .guide-routine-list li { color: hsla(215, 80%, 90%, 0.65); }
+  .guide-routine--green  .guide-routine-list li { color: hsla(150, 60%, 90%, 0.65); }
+  .guide-routine--orange .guide-routine-list li { color: hsla(25,  85%, 90%, 0.65); }
+
+  .guide-routine-list li::before {
+    content: '•';
+    @apply shrink-0;
+  }
+  .guide-routine--blue   .guide-routine-list li::before { color: hsl(215, 80%, 65%); }
+  .guide-routine--green  .guide-routine-list li::before { color: var(--guide-green); }
+  .guide-routine--orange .guide-routine-list li::before { color: var(--guide-orange); }
+
+  /* ── Quick-start checklist ───────────────────────────────── */
+  .guide-checklist-item {
+    @apply flex items-center gap-[10px] py-2 text-[13px];
+    color: var(--guide-text2);
+    border-bottom: 1px solid var(--guide-border);
+  }
+  .guide-checklist-item:last-child { @apply border-b-0; }
+
+  .guide-check-sq {
+    @apply inline-block shrink-0 rounded;
+    width: 16px;
+    height: 16px;
+    background: var(--guide-bg3);
+    border: 1px solid var(--guide-border2);
+  }
+
+  /* ── Responsive ──────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .guide-layout {
+      grid-template-columns: 1fr;
+    }
+    .guide-sidebar {
+      @apply static h-auto;
+      border-right: none;
+      border-bottom: 1px solid var(--guide-border);
+    }
+    .guide-main {
+      @apply px-4 py-5;
+    }
+    .guide-script-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+} /* end @layer components */

@@ -7,453 +7,615 @@ import { Callout } from 'fumadocs-ui/components/callout';
 import { Steps, Step } from 'fumadocs-ui/components/steps';
 import { Cards, Card } from 'fumadocs-ui/components/card';
 
-# The Ultimate Japanese Immersion Guide
-
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-10 my-12">
-
-  {/* Left Sidebar - Learning Path */}
-  <div className="lg:col-span-3 lg:sticky lg:top-20 self-start">
-    <div className="flex items-center gap-3 mb-8">
-      <div className="text-3xl">📍</div>
-      <h3 className="text-2xl font-bold">Learning Path</h3>
-    </div>
-
-    <div className="space-y-4">
-      <div className="rounded-3xl border border-blue-500/40 bg-gradient-to-br from-blue-950 to-slate-950 p-6 hover:border-blue-400 transition-all">
-        <div className="flex items-center gap-4">
-          <div className="w-9 h-9 rounded-2xl bg-blue-600 flex items-center justify-center font-bold text-lg">1</div>
-          <div>
-            <p className="font-semibold text-blue-100">Learn Kana</p>
-            <p className="text-sm text-blue-400">Week 1</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-purple-950 to-slate-950 p-6 hover:border-purple-400 transition-all">
-        <div className="flex items-center gap-4">
-          <div className="w-9 h-9 rounded-2xl bg-purple-600 flex items-center justify-center font-bold text-lg">2</div>
-          <div>
-            <p className="font-semibold text-purple-100">Anki & Immersion</p>
-            <p className="text-sm text-purple-400">Weeks 1–4</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="rounded-3xl border border-emerald-500/40 bg-gradient-to-br from-emerald-950 to-slate-950 p-6 hover:border-emerald-400 transition-all">
-        <div className="flex items-center gap-4">
-          <div className="w-9 h-9 rounded-2xl bg-emerald-600 flex items-center justify-center font-bold text-lg">3</div>
-          <div>
-            <p className="font-semibold text-emerald-100">Yomitan, Mining & Clubs</p>
-            <p className="text-sm text-emerald-400">Month 1–6</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="rounded-3xl border border-orange-500/40 bg-gradient-to-br from-orange-950 to-slate-950 p-6 hover:border-orange-400 transition-all">
-        <div className="flex items-center gap-4">
-          <div className="w-9 h-9 rounded-2xl bg-orange-600 flex items-center justify-center font-bold text-lg">4</div>
-          <div>
-            <p className="font-semibold text-orange-100">Output & Mastery</p>
-            <p className="text-sm text-orange-400">Month 6+</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Main Content - All your original content preserved */}
-  <div className="lg:col-span-9 space-y-16">
-
-    ## Introduction
-    This guide is made for **absolute beginners** who want to learn Japanese in a fun, natural way — by watching anime, reading manga, playing visual novels, and enjoying Japanese content you actually like.
-
-    We'll start with the absolute basics, then move into real immersion. Don't worry if you know nothing right now — that's exactly who this is for. Follow the stages in order and you'll have everything you need.
-
-    ---
-
-    ## Learning Roadmap
-
-    <div className="space-y-8 my-10">
-      {/* Foundation Stage */}
-      <div className="rounded-3xl border border-blue-500/30 bg-gradient-to-br from-[#1e3a8a] to-[#0f172a] p-7">
-        <div className="flex items-center gap-3 mb-5">
-          <span className="text-2xl">🔹</span>
-          <div>
-            <h3 className="text-lg font-bold text-blue-300">Stage 1: Learn the Basics</h3>
-            <p className="text-blue-400/90 text-sm">Weeks 1–2 • Just get comfortable</p>
-          </div>
-        </div>
-        <p className="text-blue-100/80 text-sm leading-relaxed mb-4">
-          Don't overthink this stage. Your only goal is to get familiar with Japanese enough to start immersion. You are <strong>not</strong> trying to master grammar or memorise everything.
-        </p>
-        <ul className="space-y-2 text-sm ml-1 text-blue-200/70 border-t border-blue-500/20 pt-4">
-          <li>① Learn Hiragana</li>
-          <li>② Learn Katakana</li>
-          <li>③ Start Kaishi 1.5k (5–20 words/day)</li>
-          <li>④ Read a beginner grammar guide</li>
-          <li>⑤ Optional: try 10 mins of pitch accent practice</li>
-        </ul>
-      </div>
-
-      {/* Immersion Stage */}
-      <div className="rounded-3xl border border-green-500/30 bg-gradient-to-br from-[#166534] to-[#052e16] p-7">
-        <div className="flex items-center gap-3 mb-5">
-          <span className="text-2xl">🌊</span>
-          <div>
-            <h3 className="text-lg font-bold text-green-300">Stage 2: Start Immersion</h3>
-            <p className="text-green-400/90 text-sm">Weeks 2+ • Real learning starts here</p>
-          </div>
-        </div>
-        <p className="text-green-100/80 text-sm leading-relaxed mb-4">
-          This is the main stage. Start consuming Japanese every day — anime, manga, visual novels, or anything you enjoy. Understanding very little at first is completely normal.
-        </p>
-        <ul className="space-y-2 text-sm ml-1 text-green-200/70 border-t border-green-500/20 pt-4">
-          <li>① Install Yomitan + immersion tools</li>
-          <li>② Watch anime / read manga with Japanese text</li>
-          <li>③ Look up unknown words</li>
-          <li>④ Keep doing Anki daily</li>
-          <li>⑤ Optional: sentence mine useful words</li>
-        </ul>
-      </div>
-
-      {/* Output Stage */}
-      <div className="rounded-3xl border border-orange-500/30 bg-gradient-to-br from-[#9a3412] to-[#431407] p-7">
-        <div className="flex items-center gap-3 mb-5">
-          <span className="text-2xl">🚀</span>
-          <div>
-            <h3 className="text-lg font-bold text-orange-300">Stage 3: Output & Advanced Content</h3>
-            <p className="text-orange-400/90 text-sm">Months 6+ • Start using Japanese</p>
-          </div>
-        </div>
-        <p className="text-orange-100/80 text-sm leading-relaxed mb-4">
-          Once immersion feels easier, move into harder content and begin using Japanese yourself through texting, writing, or speaking.
-        </p>
-        <ul className="space-y-2 text-sm ml-1 text-orange-200/70 border-t border-orange-500/20 pt-4">
-          <li>① Read harder content (LNs, VNs, raw manga)</li>
-          <li>② Practice listening without subtitles</li>
-          <li>③ Start texting or speaking in Japanese</li>
-          <li>④ Continue immersion long-term</li>
-        </ul>
-      </div>
-    </div>
-
-    <Callout type="info">
-      <strong>The Right Mindset:</strong> You don't study until you're "ready". You study <strong>while</strong> enjoying Japanese content. It will feel hard at first — that's normal and how you actually improve.
-    </Callout>
-
-    ---
-
-    ## Basics First (Don't Skip This!)
-
-    ### Hiragana & Katakana
-    These are the two basic "alphabets" of Japanese — think of them like the ABCs. Every sound in Japanese is written with one of these, so you need to be able to read them before anything else.
-
-    The good news: there are only 46 characters in each, and with a bit of daily practice you can get comfortable in 1–2 weeks. Learn Hiragana first, then Katakana.
-
-    <Cards>
-      <Card title="RealKana" href="https://realkana.com/" description="Free practice site — learn one row at a time" />
-      <Card title="Tofugu Hiragana Guide" href="https://www.tofugu.com/japanese/learn-hiragana/" description="Best visual guide for Hiragana" />
-      <Card title="Tofugu Katakana Guide" href="https://www.tofugu.com/japanese/learn-katakana/" description="Best visual guide for Katakana" />
-    </Cards>
-
-    <Callout type="info">
-      Spend 1–2 weeks on this until you can read both without thinking too much. You don't need to be lightning fast — just comfortable.
-    </Callout>
-
-    ---
-
-    ## Grammar, Vocab & Pitch Accent
-
-    ### Grammar
-    Grammar gives you the skeleton of the language — how sentences are built. You don't need to master it or do exercises. Just **read and understand** the basics so things start to make sense when you immerse. You'll internalise it naturally over time.
-
-    Pick **one** guide and stick with it:
-
-    <Cards>
-      <Card title="Tae Kim's Guide" href="https://guidetojapanese.org/learn/" description="Most popular — thorough and free" />
-      <Card title="Yokubi" href="https://yoku.bi/" description="Faster and more modern" />
-      <Card title="Japanese Ammo with Misa" href="https://www.youtube.com/playlist?list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N" description="Best if you prefer learning by video" />
-    </Cards>
-
-    ### Vocabulary
-    Use **Anki** — a free flashcard app that shows you words right before you're about to forget them, so you remember more with less effort. It's one of the most powerful tools for language learning.
-
-    <Cards>
-      <Card title="Download Anki" href="https://apps.ankiweb.net/" description="Free flashcard app for all platforms" />
-      <Card title="Kaishi 1.5k Deck" href="https://github.com/donkuri/kaishi" description="The best beginner deck — 1,500 essential words" />
-      <Card title="Anki Tutorial" href="https://www.youtube.com/watch?v=DcY2Svs3h8M" description="How to set it up and use it properly" />
-    </Cards>
-
-    <Callout type="info">
-      <strong>Daily goal:</strong> 5–20 new words + reviews. Consistency matters more than quantity — even 5 words a day adds up fast.
-    </Callout>
-
-    ### Kanji
-    Kanji are the Chinese-origin characters used in Japanese. There are thousands of them, which sounds scary — but don't study them in isolation. **Learn Kanji inside vocabulary**, not as separate symbols. When you learn a word, you're learning its kanji at the same time. Much more natural and efficient.
-
-    ### Pitch Accent
-    Pitch accent is the natural rise and fall in the sound of Japanese words — like a melody. It's not essential for beginners, but being aware of it early helps you sound more natural later.
-
-    <Cards>
-      <Card title="Quick Pitch Accent Guide" href="https://docs.google.com/document/d/1ReBf08JFK4n0PXdOxThAfWuiK9UWVZEWWzeKSECWTQo/edit" description="Short and practical intro to pitch accent" />
-      <Card title="Kuuube Minimal Pairs" href="https://kuuuube.github.io/minimal-pairs/" description="Train your ear to hear the difference" />
-    </Cards>
-
-    ---
-
-    ## Basics Routine (First 2–4 Weeks)
-
-    <Steps>
-      <Step>**Hiragana + Katakana** — Finish both</Step>
-      <Step>**Anki** — 5–20 new words every day</Step>
-      <Step>**Grammar** — Read 2–3 short lessons per day</Step>
-      <Step>**Pitch** — Practice 10 minutes of minimal pairs daily</Step>
-    </Steps>
-
-    <div className="rounded-3xl border border-blue-500/30 bg-gradient-to-br from-[#0f172a] to-[#1e2937] p-6 my-6 shadow-lg">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="text-2xl">📅</div>
-        <h3 className="font-bold text-blue-300">Daily Basics Routine</h3>
-      </div>
-      <ul className="space-y-2 text-sm">
-        <li className="flex items-start gap-2">• <span>Finish Hiragana & Katakana</span></li>
-        <li className="flex items-start gap-2">• <span>Anki: 5–20 new words + reviews</span></li>
-        <li className="flex items-start gap-2">• <span>Read 2–3 grammar lessons</span></li>
-        <li className="flex items-start gap-2">• <span>Pitch practice: 10 minutes</span></li>
-      </ul>
-    </div>
-
-    Once you finish the basics, move to the **Input Stage**.
-
-    ---
-
-    ## The Input Stage (Main Stage)
-
-    This is where **real learning** happens.
-
-    <div className="rounded-3xl border border-violet-500/40 bg-gradient-to-br from-[#2e1065] to-[#1e1b4b] p-8 my-8 shadow-xl">
-      <div className="flex items-center gap-3 mb-4">
-        <span className="text-3xl">🌊</span>
-        <h3 className="text-xl font-bold text-violet-300">What is Input / Immersion?</h3>
-      </div>
-      <p className="text-violet-100 leading-relaxed">
-        Immersion means exposing yourself to large amounts of real Japanese — watching, reading, listening — so you build natural intuition for how the language actually works. Rather than memorising rules, you absorb patterns the same way you absorbed your native language growing up.
-      </p>
-      <p className="text-violet-100 leading-relaxed mt-3">
-        This is based on the <strong>Input Hypothesis</strong>: the best way to learn a language is through <strong>comprehensible input</strong> — content you mostly understand, with a little you don't.
-      </p>
-      <p className="text-violet-100 leading-relaxed mt-3">
-        It's like learning to swim — reading about technique helps, but you only really improve when you get in the water.
-      </p>
-      <p className="text-violet-100 leading-relaxed mt-3">
-        <strong>Key Point:</strong> Languages aren't 1:1 translations. Many words have nuances that don't exist in English — particles like は vs が can't be perfectly translated, and words like かける have many different meanings depending on context. Immersion is how you build the natural instinct to understand these without consciously thinking about them.
-      </p>
-    </div>
-
-    ### The Goal: Automaticity
-    The aim of immersion is to reach a point where you understand Japanese **automatically** — without having to translate in your head first.
-
-    Think about your native language. When someone speaks to you, you don't consciously decode each word — you just understand. That's **automaticity**, and it's what immersion builds over time. Eventually you'll read manga or watch anime and just *get it*, without the mental effort.
-
-    <Callout type="info">
-      <strong>Important:</strong> Input needs to be <strong>comprehensible</strong> to work. If you understand nothing at all, it's hard to make progress. Aim for content where you get the gist, even if you miss details.
-    </Callout>
-
-    <Callout type="warn">
-      <strong>What to expect:</strong> You will understand almost nothing at first. It will feel slow and confusing. This is completely normal — progress feels slow, then suddenly accelerates.
-    </Callout>
-
-    ### Helpful Videos
-    <Cards>
-      <Card title="How to Learn a Language: INPUT" href="https://www.youtube.com/watch?v=J_EQDtpYSNM" description="Why input works and why most methods don't" />
-      <Card title="Why Immersion Works" href="https://www.youtube.com/watch?v=7fvCb5_Nzq4" description="A deeper look at the immersion approach" />
-    </Cards>
-
-    ---
-
-    ## What to Immerse With
-
-    You don't have to just watch anime. Any Japanese content you enjoy works — and mixing it up keeps things fresh.
-
-    ### Anime
-    Anime is the most beginner-friendly option. You get audio, visual context, and subtitles all at once.
-
-    <Cards>
-      <Card title="ASBPlayer" href="https://killergerbah.github.il/asbplayer/" description="Load Japanese subtitle files alongside any streaming video" />
-      <Card title="Jimaku.cc" href="https://jimaku.cc/" description="Find Japanese subtitle files for anime" />
-      <Card title="Anime Setup Guide" href="https://www.reddit.com/r/LearnJapanese/comments/1iotyp2/use_asbplayer_to_learn_through_anime/" description="Step-by-step ASBPlayer + Yomitan setup" />
-    </Cards>
-
-    Also install **Yomitan** — a browser extension that lets you hover over any Japanese word and instantly see its meaning. Essential for all immersion types.
-
-    ### Manga
-    <Cards>
-      <Card title="Manga Setup (PC)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupMangaOnPC/" description="Set up OCR or Mokuro to read manga with Yomitan" />
-      <Card title="Manga Setup (Android)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupMangaOnAndroid/" description="Read and mine manga on mobile" />
-    </Cards>
-
-    ### Visual Novels
-    <Cards>
-      <Card title="VN Setup (PC)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupVnOnPC/" description="Set up Textractor to hook text from visual novels" />
-      <Card title="VN Setup (Android)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupVnOnAndroid/" description="Play and mine visual novels on mobile" />
-    </Cards>
-
-    ### Light Novels
-    <Cards>
-      <Card title="LN Setup (PC)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupLnOnPC/" description="Read light novels in browser with Yomitan using TTU reader" />
-      <Card title="LN Setup (Android)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupLnOnAndroid/" description="Read light novels on mobile" />
-    </Cards>
-
-    <Callout type="info">
-      All setup guides above are from the **[JP Lazy Guide](https://lazyguidejp.github.io/jp-lazy-guide/)** — a great resource for pre-configured, ready-to-use immersion tools.
-    </Callout>
-
-    ---
-
-    ## How to Immerse (Simple Method)
-
-    Think of each sentence like a puzzle. Some pieces (words) you'll recognise, some you won't. Your job is to fit it together — use context to guess, or look things up when needed.
-
-    <Steps>
-      <Step>Open your content of choice with Japanese text/subtitles on</Step>
-      <Step>Try to read or follow each sentence as it appears</Step>
-      <Step>**0–2 unknown words?** Look them up with Yomitan. **3+ unknown words?** Skip it and keep going.</Step>
-      <Step>Spend 30–60 seconds trying to understand, then move on</Step>
-    </Steps>
-
-    <Cards>
-      <Card title="How to Immerse Step-by-Step" href="https://www.youtube.com/watch?v=9KlwmHXsXhQ" description="A practical walkthrough of what immersion actually looks like day-to-day" />
-    </Cards>
-
-    <Callout type="info">
-      Start with content you already know — a manga you've read or an anime you've seen in English.
-    </Callout>
-
-    **Recommended daily time:** 1–2 hours
-
-    ### How Often Should You Look Things Up?
-    - **Look up more** when content is hard.
-    - **Look up less** when content is comfortable.
-
-    ### Passive Immersion
-    <Callout type="warn">
-      The less focused you are, the fewer gains you'll make. Passive immersion is a useful bonus — not a replacement for active immersion.
-    </Callout>
-
-    ### Why Not Just Use Textbooks?
-    Textbooks teach you *about* the language. Immersion teaches you *how* the language actually works.
-
-    <div className="rounded-3xl border border-green-500/30 bg-gradient-to-br from-[#052e16] to-[#14532d] p-6 my-6 shadow-lg">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="text-2xl">🎯</div>
-        <h3 className="font-bold text-green-300">Daily Immersion Routine</h3>
-      </div>
-      <ul className="space-y-2 text-sm">
-        <li className="flex items-start gap-2">• <span>1–2 hours of your chosen content</span></li>
-        <li className="flex items-start gap-2">• <span>Look up 0–2 unknown words per sentence</span></li>
-        <li className="flex items-start gap-2">• <span>Sentence mine good words into Anki</span></li>
-        <li className="flex items-start gap-2">• <span>For anime: later hide subs and focus on listening</span></li>
-      </ul>
-    </div>
-
-    ---
-
-    ## Sentence Mining (Optional but Powerful)
-
-    <Cards>
-      <Card title="Sentence Mining Tutorial" href="https://www.youtube.com/watch?v=B60cj69MSmA" description="How to mine sentences with ASBPlayer" />
-      <Card title="JP Lazy Guide" href="https://lazyguidejp.github.io/jp-lazy-guide/" description="Pre-configured mining setup" />
-    </Cards>
-
-    ---
-
-    ## Improving Listening
-
-    <Steps>
-      <Step>Hide the subtitles</Step>
-      <Step>Listen to a sentence</Step>
-      <Step>If you don't understand, turn subtitles back on</Step>
-      <Step>Look up 1–2 words if needed</Step>
-      <Step>Listen again while reading, then hide subs and try once more</Step>
-    </Steps>
-
-    <Cards>
-      <Card title="Intensive Listening Guide" href="https://www.youtube.com/watch?v=o8857j-RwhA" description="A practical guide to improving listening" />
-    </Cards>
-
-    ---
-
-    ## Output: Speaking & Writing
-
-    Output means producing Japanese yourself — texting, writing, speaking.
-
-    **Input comes first.**
-
-    ### What good output actually requires
-    - **Grammar**
-    - **Word choice**
-    - **Social framing**
-
-    ### Ways to practice output
-    - Chat with native speakers (HelloTalk, Tandem, italki, EJLX Discord)
-    - Write a diary
-    - Internal narration
-    - Watch conversational content attentively
-
-    <Callout type="info">
-      The fastest way to improve output is finding a community or group of people you actually want to talk to in Japanese.
-    </Callout>
-
-    <Cards>
-      <Card title="Learning to Output" href="https://morg.systems/Learning-to-Output" description="In-depth guide to developing natural speaking and writing ability" />
-    </Cards>
-
-    ---
-
-    ## Next Steps After Basics
-
-    <div className="rounded-3xl border border-orange-500/30 bg-gradient-to-br from-[#431407] to-[#78350f] p-6 my-6 shadow-lg">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="text-2xl">🚀</div>
-        <h3 className="font-bold text-orange-300">Output & Mastery Stage</h3>
-      </div>
-      <ul className="space-y-2 text-sm">
-        <li className="flex items-start gap-2">• <span>Read light novels & visual novels</span></li>
-        <li className="flex items-start gap-2">• <span>Start speaking & writing (text first)</span></li>
-        <li className="flex items-start gap-2">• <span>Practice output with corrections</span></li>
-        <li className="flex items-start gap-2">• <span>Prepare for JLPT N5 → N1</span></li>
-      </ul>
-    </div>
-
-    ---
-
-    ## Quick Start Checklist
-    - [ ] Finish Hiragana & Katakana
-    - [ ] Install Anki + start 5–20 words daily
-    - [ ] Read basic grammar guide
-    - [ ] Set up ASBPlayer + Yomitan
-    - [ ] Pick your content type and get set up
-    - [ ] Immerse for at least 1 hour today
-
-    ---
-
-    ## Further Reading
-
-    <Cards>
-      <Card title="JP Lazy Guide" href="https://lazyguidejp.github.io/jp-lazy-guide/" description="Pre-configured setup guides" />
-      <Card title="Learning to Output" href="https://morg.systems/Learning-to-Output" />
-      <Card title="Tae Kim Grammar" href="https://guidetojapanese.org/learn/" />
-      <Card title="Anki Tutorial" href="https://www.youtube.com/watch?v=DcY2Svs3h8M" />
-    </Cards>
-
-    ---
-
-    ## Community and Support
-    Have questions? Join our Discord!
-
-    This guide is meant to be simple. Go at your own pace. **Consistency is more important than speed.**
-
-    *Ready to start? Go back to the [Home](/), or jump into the [Basics section](#basics-first).*
-
+<div className="guide-layout">
+
+{/* ── LEFT SIDEBAR ─────────────────────────────────────── */}
+<aside className="guide-sidebar">
+  <p className="guide-sidebar-label">Learning Path</p>
+  <a href="#roadmap" className="guide-nav-item guide-nav-item--active">
+    <span className="guide-nav-num">①</span>
+    <span>Roadmap</span>
+  </a>
+  <div className="guide-nav-connector" />
+  <a href="#basics" className="guide-nav-item">
+    <span className="guide-nav-num">1</span>
+    <span>Learn Kana</span>
+  </a>
+  <a href="#hiragana" className="guide-nav-sub">↳ Hiragana</a>
+  <a href="#katakana" className="guide-nav-sub">↳ Katakana</a>
+  <div className="guide-nav-connector" />
+  <a href="#vocab" className="guide-nav-item">
+    <span className="guide-nav-num">2</span>
+    <span>Grammar, Vocab &amp; Pitch</span>
+  </a>
+  <a href="#grammar"    className="guide-nav-sub">↳ Grammar</a>
+  <a href="#vocabulary" className="guide-nav-sub">↳ Vocabulary</a>
+  <a href="#kanji"      className="guide-nav-sub">↳ Kanji</a>
+  <a href="#pitch"      className="guide-nav-sub">↳ Pitch Accent</a>
+  <div className="guide-nav-connector" />
+  <a href="#immersion-section" className="guide-nav-item">
+    <span className="guide-nav-num">3</span>
+    <span>Immersion</span>
+  </a>
+  <a href="#what-is-immersion" className="guide-nav-sub">↳ What is Immersion?</a>
+  <a href="#what-to-immerse"   className="guide-nav-sub">↳ What to Immerse With</a>
+  <a href="#how-to-immerse"    className="guide-nav-sub">↳ How to Immerse</a>
+  <a href="#sentence-mining"   className="guide-nav-sub">↳ Sentence Mining</a>
+  <a href="#listening"         className="guide-nav-sub">↳ Listening</a>
+  <div className="guide-nav-connector" />
+  <a href="#output-section" className="guide-nav-item">
+    <span className="guide-nav-num">4</span>
+    <span>Output</span>
+  </a>
+  <a href="#speaking" className="guide-nav-sub">↳ Speaking &amp; Writing</a>
+  <div className="guide-nav-divider" />
+  <p className="guide-sidebar-label">More</p>
+  <a href="#next-steps" className="guide-nav-item">
+    <span className="guide-nav-num">→</span>
+    <span>Next Steps</span>
+  </a>
+  <a href="#quickstart" className="guide-nav-item">
+    <span className="guide-nav-num">✓</span>
+    <span>Quick Start</span>
+  </a>
+  <a href="#resources" className="guide-nav-item">
+    <span className="guide-nav-num">📖</span>
+    <span>Further Reading</span>
+  </a>
+</aside>
+
+{/* ── MAIN CONTENT ─────────────────────────────────────── */}
+<div className="guide-main">
+
+{/* ── ROADMAP ── */}
+<span id="roadmap" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--blue">🗺️</div>
+  <div>
+    <p className="guide-step-title">Learning Roadmap</p>
+    <p className="guide-step-sub">Your complete path from zero to fluency</p>
   </div>
 </div>
+
+<div className="guide-stage guide-stage--blue">
+  <div className="guide-stage-header">
+    <span className="guide-stage-emoji">🔹</span>
+    <div>
+      <p className="guide-stage-title">Stage 1: Learn the Basics</p>
+      <p className="guide-stage-timing">Weeks 1–2 · Just get comfortable</p>
+    </div>
+  </div>
+  <p className="guide-stage-body">Don't overthink this stage. Your only goal is to get familiar with Japanese enough to start immersion. You are <strong>not</strong> trying to master grammar or memorise everything.</p>
+  <ul className="guide-stage-list">
+    <li>① Learn Hiragana</li>
+    <li>② Learn Katakana</li>
+    <li>③ Start Kaishi 1.5k (5–20 words/day)</li>
+    <li>④ Read a beginner grammar guide</li>
+    <li>⑤ Optional: try 10 mins of pitch accent practice</li>
+  </ul>
+</div>
+
+<div className="guide-stage guide-stage--green">
+  <div className="guide-stage-header">
+    <span className="guide-stage-emoji">🌊</span>
+    <div>
+      <p className="guide-stage-title">Stage 2: Start Immersion</p>
+      <p className="guide-stage-timing">Weeks 2+ · Real learning starts here</p>
+    </div>
+  </div>
+  <p className="guide-stage-body">This is the main stage. Start consuming Japanese every day — anime, manga, visual novels, or anything you enjoy. Understanding very little at first is completely normal.</p>
+  <ul className="guide-stage-list">
+    <li>① Install Yomitan + immersion tools</li>
+    <li>② Watch anime / read manga with Japanese text</li>
+    <li>③ Look up unknown words</li>
+    <li>④ Keep doing Anki daily</li>
+    <li>⑤ Optional: sentence mine useful words</li>
+  </ul>
+</div>
+
+<div className="guide-stage guide-stage--orange">
+  <div className="guide-stage-header">
+    <span className="guide-stage-emoji">🚀</span>
+    <div>
+      <p className="guide-stage-title">Stage 3: Output &amp; Advanced Content</p>
+      <p className="guide-stage-timing">Months 6+ · Start using Japanese</p>
+    </div>
+  </div>
+  <p className="guide-stage-body">Once immersion feels easier, move into harder content and begin using Japanese yourself through texting, writing, or speaking.</p>
+  <ul className="guide-stage-list">
+    <li>① Read harder content (LNs, VNs, raw manga)</li>
+    <li>② Practice listening without subtitles</li>
+    <li>③ Start texting or speaking in Japanese</li>
+    <li>④ Continue immersion long-term</li>
+  </ul>
+</div>
+
+<Callout type="info">
+  **The Right Mindset:** You don't study until you're "ready". You study **while** enjoying Japanese content. It will feel hard at first — that's normal and how you actually improve.
+</Callout>
+
+<div className="guide-divider" />
+
+<p className="guide-intro">
+  This guide is made for <strong>absolute beginners</strong> who want to learn Japanese in a fun, natural way — by watching anime, reading manga, playing visual novels, and enjoying Japanese content you actually like.
+</p>
+<p className="guide-intro">
+  We'll start with the absolute basics, then move into real immersion. Don't worry if you know nothing right now — that's exactly who this is for. Follow the stages in order and you'll have everything you need.
+</p>
+
+<div className="guide-divider" />
+
+{/* ── KANA ── */}
+<span id="basics" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--red">📝</div>
+  <div>
+    <p className="guide-step-title">Step 1: Learn Kana</p>
+    <p className="guide-step-sub">Foundation Scripts</p>
+  </div>
+</div>
+
+<p className="guide-intro">Japanese technically has four main scripts it uses:</p>
+
+<div className="guide-script-grid">
+  <div className="guide-script-card" id="hiragana">
+    <p className="guide-script-title">Hiragana (ひらがな)</p>
+    <p className="guide-script-desc">Basic Japanese script for native words and grammar</p>
+  </div>
+  <div className="guide-script-card" id="katakana">
+    <p className="guide-script-title">Katakana (カタカナ)</p>
+    <p className="guide-script-desc">Used for foreign words and emphasis</p>
+  </div>
+  <div className="guide-script-card">
+    <p className="guide-script-title">Kanji (漢字)</p>
+    <p className="guide-script-desc">Chinese characters used for words and nouns</p>
+  </div>
+  <div className="guide-script-card">
+    <p className="guide-script-title">Romaji (ローマ字)</p>
+    <p className="guide-script-desc">English alphabet representation</p>
+  </div>
+</div>
+
+<div className="guide-card">
+  <p><strong>Hiragana</strong> and <strong>Katakana</strong>, collectively referred to as Kana, should be learned first and can be learned in 1w with websites like KanaPro.</p>
+  <p>• The recommendation is to learn only how to recognise the characters, and not to write them.</p>
+  <p>• You can use mnemonics like the ones in Tofugu's website (access them through the buttons below) or apps such as "Hiragana Memory Hint" and "Katakana Memory Hint" by The Japan Foundation.</p>
+  <p><strong>Romaji</strong> is the romanization of Japanese and should be avoided!</p>
+  <p><strong>Kanji</strong> will be learned together with vocabulary and grammar; get to know more in the next step!</p>
+</div>
+
+<Cards>
+  <Card title="Learn Kana here! Kuuube Quiz" href="https://realkana.com/" description="Free practice site — learn one row at a time" />
+  <Card title="Hiragana Mnemonics" href="https://www.tofugu.com/japanese/learn-hiragana/" description="Best visual guide for Hiragana" />
+  <Card title="Katakana Mnemonics" href="https://www.tofugu.com/japanese/learn-katakana/" description="Best visual guide for Katakana" />
+</Cards>
+
+<Callout type="info">
+  Spend 1–2 weeks on this until you can read both without thinking too much. You don't need to be lightning fast — just comfortable.
+</Callout>
+
+<div className="guide-divider" />
+
+{/* ── GRAMMAR / VOCAB / PITCH ── */}
+<span id="vocab" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--blue">🧠</div>
+  <div>
+    <p className="guide-step-title">Step 2: Grammar, Vocab &amp; Pitch Accent</p>
+    <p className="guide-step-sub">Anki &amp; Immersion</p>
+  </div>
+</div>
+
+<p className="guide-intro">It's now time to start learning <strong>grammar, vocab and how to read Kanji!</strong> These three are meant to be learned together, especially the latter two.</p>
+
+<span id="grammar" className="guide-anchor" />
+
+#### Grammar
+
+<div className="guide-card">
+  <p>Grammar gives you the skeleton of the language — how sentences are built. You don't need to master it or do exercises. Just <strong>read and understand</strong> the basics so things start to make sense when you immerse. You'll internalise it naturally over time.</p>
+  <p>Pick <strong>one</strong> guide and stick with it:</p>
+</div>
+
+<Cards>
+  <Card title="Tae Kim's Guide" href="https://guidetojapanese.org/learn/" description="Most popular — thorough and free" />
+  <Card title="Yokubi" href="https://yoku.bi/" description="Faster and more modern" />
+  <Card title="Japanese Ammo with Misa" href="https://www.youtube.com/playlist?list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N" description="Best if you prefer learning by video" />
+</Cards>
+
+<span id="vocabulary" className="guide-anchor" />
+
+#### Vocabulary
+
+<div className="guide-card">
+  <p>Use <strong>Anki</strong> — a free flashcard app that shows you words right before you're about to forget them, so you remember more with less effort. It's one of the most powerful tools for language learning.</p>
+</div>
+
+<Cards>
+  <Card title="Download Anki" href="https://apps.ankiweb.net/" description="Free flashcard app for all platforms" />
+  <Card title="Kaishi 1.5k Deck" href="https://github.com/donkuri/kaishi" description="The best beginner deck — 1,500 essential words" />
+  <Card title="Anki Tutorial" href="https://www.youtube.com/watch?v=DcY2Svs3h8M" description="How to set it up and use it properly" />
+</Cards>
+
+<Callout type="info">
+  **Daily goal:** 5–20 new words + reviews. Consistency matters more than quantity — even 5 words a day adds up fast.
+</Callout>
+
+<span id="kanji" className="guide-anchor" />
+
+#### Kanji
+
+<div className="guide-card">
+  <p>Kanji are the Chinese-origin characters used in Japanese. There are thousands of them, which sounds scary — but don't study them in isolation. <strong>Learn Kanji inside vocabulary</strong>, not as separate symbols. When you learn a word, you're learning its kanji at the same time. Much more natural and efficient.</p>
+</div>
+
+<span id="pitch" className="guide-anchor" />
+
+#### Pitch Accent
+
+<div className="guide-card">
+  <p>Pitch accent is the natural rise and fall in the sound of Japanese words — like a melody. It's not essential for beginners, but being aware of it early helps you sound more natural later.</p>
+</div>
+
+<Cards>
+  <Card title="Quick Pitch Accent Guide" href="https://docs.google.com/document/d/1ReBf08JFK4n0PXdOxThAfWuiK9UWVZEWWzeKSECWTQo/edit" description="Short and practical intro to pitch accent" />
+  <Card title="Kuuube Minimal Pairs" href="https://kuuuube.github.io/minimal-pairs/" description="Train your ear to hear the difference" />
+</Cards>
+
+#### Basics Routine (First 2–4 Weeks)
+
+<div className="guide-card">
+  <ol className="guide-steps-list">
+    <li><strong>Hiragana + Katakana</strong> — Finish both</li>
+    <li><strong>Anki</strong> — 5–20 new words every day</li>
+    <li><strong>Grammar</strong> — Read 2–3 short lessons per day</li>
+    <li><strong>Pitch</strong> — Practice 10 minutes of minimal pairs daily</li>
+  </ol>
+</div>
+
+<div className="guide-routine guide-routine--blue">
+  <div className="guide-routine-header">
+    <span>📅</span>
+    <p className="guide-routine-title">Daily Basics Routine</p>
+  </div>
+  <ul className="guide-routine-list">
+    <li>Finish Hiragana &amp; Katakana</li>
+    <li>Anki: 5–20 new words + reviews</li>
+    <li>Read 2–3 grammar lessons</li>
+    <li>Pitch practice: 10 minutes</li>
+  </ul>
+</div>
+
+<p className="guide-intro">Once you finish the basics, move to the <strong>Input Stage</strong>.</p>
+
+<div className="guide-divider" />
+
+{/* ── IMMERSION ── */}
+<span id="immersion-section" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--green">🌊</div>
+  <div>
+    <p className="guide-step-title">Step 3: The Input Stage</p>
+    <p className="guide-step-sub">Where real learning happens</p>
+  </div>
+</div>
+
+<span id="what-is-immersion" className="guide-anchor" />
+
+<div className="guide-infobox">
+  <div className="guide-infobox-header">
+    <span className="guide-infobox-emoji">🌊</span>
+    <p className="guide-infobox-title">What is Input / Immersion?</p>
+  </div>
+  <p>Immersion means exposing yourself to large amounts of real Japanese — watching, reading, listening — so you build natural intuition for how the language actually works. Rather than memorising rules, you absorb patterns the same way you absorbed your native language growing up.</p>
+  <p>This is based on the <strong>Input Hypothesis</strong>: the best way to learn a language is through <strong>comprehensible input</strong> — content you mostly understand, with a little you don't.</p>
+  <p>It's like learning to swim — reading about technique helps, but you only really improve when you get in the water.</p>
+  <p><strong>Key Point:</strong> Languages aren't 1:1 translations. Many words have nuances that don't exist in English — particles like は vs が can't be perfectly translated, and words like かける have many different meanings depending on context. Immersion is how you build the natural instinct to understand these without consciously thinking about them.</p>
+</div>
+
+#### The Goal: Automaticity
+
+<div className="guide-card">
+  <p>The aim of immersion is to reach a point where you understand Japanese <strong>automatically</strong> — without having to translate in your head first.</p>
+  <p>Think about your native language. When someone speaks to you, you don't consciously decode each word — you just understand. That's <strong>automaticity</strong>, and it's what immersion builds over time. Eventually you'll read manga or watch anime and just <em>get it</em>, without the mental effort.</p>
+</div>
+
+<Callout type="info">
+  **Important:** Input needs to be **comprehensible** to work. If you understand nothing at all, it's hard to make progress. Aim for content where you get the gist, even if you miss details.
+</Callout>
+
+<Callout type="warn">
+  **What to expect:** You will understand almost nothing at first. It will feel slow and confusing. This is completely normal — progress feels slow, then suddenly accelerates.
+</Callout>
+
+<Cards>
+  <Card title="How to Learn a Language: INPUT" href="https://www.youtube.com/watch?v=J_EQDtpYSNM" description="Why input works and why most methods don't" />
+  <Card title="Why Immersion Works" href="https://www.youtube.com/watch?v=7fvCb5_Nzq4" description="A deeper look at the immersion approach" />
+</Cards>
+
+<div className="guide-divider" />
+
+<span id="what-to-immerse" className="guide-anchor" />
+
+## What to Immerse With
+
+<p className="guide-intro">You don't have to just watch anime. Any Japanese content you enjoy works — and mixing it up keeps things fresh. Here's a breakdown of the main options and how to get started with each.</p>
+
+### Anime
+
+<div className="guide-card">
+  <p>Anime is the most beginner-friendly option. You get audio, visual context, and subtitles all at once, which makes it much easier to follow along. Use ASBPlayer to load Japanese subtitle files alongside any streaming site.</p>
+  <p>Also install <strong>Yomitan</strong> — a browser extension that lets you hover over any Japanese word and instantly see its meaning. Essential for all immersion types.</p>
+</div>
+
+<Cards>
+  <Card title="ASBPlayer" href="https://killergerbah.github.io/asbplayer/" description="Load Japanese subtitle files alongside any streaming video" />
+  <Card title="Jimaku.cc" href="https://jimaku.cc/" description="Find Japanese subtitle files for anime" />
+  <Card title="Anime Setup Guide" href="https://www.reddit.com/r/LearnJapanese/comments/1iotyp2/use_asbplayer_to_learn_through_anime/" description="Step-by-step ASBPlayer + Yomitan setup" />
+</Cards>
+
+### Manga
+
+<div className="guide-card">
+  <p>Manga is a great next step after anime — you control the pace, and the visual context helps a lot. To use Yomitan on manga, you need to either run an OCR tool to scan text from images, or pre-process your manga with Mokuro (which makes all the text hoverable directly).</p>
+</div>
+
+<Cards>
+  <Card title="Manga Setup (PC)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupMangaOnPC/" description="Set up OCR or Mokuro to read manga with Yomitan" />
+  <Card title="Manga Setup (Android)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupMangaOnAndroid/" description="Read and mine manga on mobile" />
+</Cards>
+
+### Visual Novels
+
+<div className="guide-card">
+  <p>Visual novels combine text with voice acting, making them excellent for immersion — you're reading and listening at the same time. You'll need a tool called Textractor to pull the text out of the game so Yomitan can read it.</p>
+</div>
+
+<Cards>
+  <Card title="VN Setup (PC)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupVnOnPC/" description="Set up Textractor to hook text from visual novels" />
+  <Card title="VN Setup (Android)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupVnOnAndroid/" description="Play and mine visual novels on mobile" />
+</Cards>
+
+### Light Novels
+
+<div className="guide-card">
+  <p>Light novels are pure text — great for pushing your reading ability once you have a decent vocabulary base. You read them as epub files in a browser reader called TTU, and Yomitan works on top of it automatically.</p>
+</div>
+
+<Cards>
+  <Card title="LN Setup (PC)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupLnOnPC/" description="Read light novels in browser with Yomitan using TTU reader" />
+  <Card title="LN Setup (Android)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupLnOnAndroid/" description="Read light novels on mobile" />
+</Cards>
+
+<Callout type="info">
+  All setup guides above are from the **[JP Lazy Guide](https://lazyguidejp.github.io/jp-lazy-guide/)** — a great resource for pre-configured, ready-to-use immersion tools. Highly recommended if you want everything set up with minimal fuss.
+</Callout>
+
+<div className="guide-divider" />
+
+<span id="how-to-immerse" className="guide-anchor" />
+
+## How to Immerse (Simple Method)
+
+<p className="guide-intro">Think of each sentence like a puzzle. Some pieces (words) you'll recognise, some you won't. Your job is to fit it together — use context to guess, or look things up when needed. Once a sentence clicks, move on to the next one.</p>
+
+<div className="guide-card">
+  <ol className="guide-steps-list">
+    <li>Open your content of choice with Japanese text/subtitles on</li>
+    <li>Try to read or follow each sentence as it appears</li>
+    <li><strong>0–2 unknown words?</strong> Look them up with Yomitan. <strong>3+ unknown words?</strong> Skip it and keep going.</li>
+    <li>Spend 30–60 seconds trying to understand, then move on</li>
+  </ol>
+</div>
+
+<Cards>
+  <Card title="How to Immerse Step-by-Step" href="https://www.youtube.com/watch?v=9KlwmHXsXhQ" description="A practical walkthrough of what immersion actually looks like day-to-day" />
+</Cards>
+
+<Callout type="info">
+  Start with content you already know — a manga you've read or an anime you've seen in English. Knowing the story gives you a huge boost in understanding.
+</Callout>
+
+**Recommended daily time:** 1–2 hours
+
+### How Often Should You Look Things Up?
+
+<div className="guide-card">
+  <p>There's no single right answer — adjust based on what you're reading or watching:</p>
+  <ul className="guide-bullet-list">
+    <li><strong>Look up more</strong> when content is hard. This helps you understand deeply and pick up vocab faster, but slows your pace.</li>
+    <li><strong>Look up less</strong> when content is comfortable. This builds faster real-time comprehension, closer to how you'll eventually consume Japanese naturally.</li>
+  </ul>
+  <p>Over time you'll naturally rely on lookups less and less as things become automatic.</p>
+</div>
+
+### Passive Immersion
+
+<div className="guide-card">
+  <p>You can also immerse during low-effort activities — commuting, cooking, cleaning. Just put on a Japanese podcast or re-watch anime audio in the background.</p>
+</div>
+
+<Callout type="warn">
+  The less focused you are, the fewer gains you'll make. Passive immersion is a useful bonus — not a replacement for active immersion.
+</Callout>
+
+### Why Not Just Use Textbooks?
+
+<div className="guide-card">
+  <p>Textbooks teach you <em>about</em> the language — the rules, grammar patterns, vocabulary lists. That's useful, but it's not enough on its own. You still need to learn <em>how</em> to use those rules in real situations — and that's what immersion does. Immersion is where knowledge turns into instinct.</p>
+</div>
+
+<div className="guide-routine guide-routine--green">
+  <div className="guide-routine-header">
+    <span>🎯</span>
+    <p className="guide-routine-title">Daily Immersion Routine</p>
+  </div>
+  <ul className="guide-routine-list">
+    <li>1–2 hours of your chosen content (anime, manga, VN, LN)</li>
+    <li>Look up 0–2 unknown words per sentence</li>
+    <li>Sentence mine good words into Anki</li>
+    <li>For anime: later hide subs and focus on listening</li>
+    <li>Optional: passive immersion during low-focus tasks</li>
+  </ul>
+</div>
+
+<div className="guide-divider" />
+
+<span id="sentence-mining" className="guide-anchor" />
+
+## Sentence Mining (Optional but Powerful)
+
+<div className="guide-card">
+  <p>When you find useful words or sentences while immersing, save them directly into your own Anki deck. Instead of studying random vocabulary, you're studying words from content you've actually consumed — which makes them stick much better.</p>
+  <p>ASBPlayer (anime), Yomitan (manga/LN), and the VN texthooker setup all support mining with a single shortcut.</p>
+</div>
+
+<Cards>
+  <Card title="Sentence Mining Tutorial" href="https://www.youtube.com/watch?v=B60cj69MSmA" description="How to mine sentences with ASBPlayer" />
+  <Card title="JP Lazy Guide" href="https://lazyguidejp.github.io/jp-lazy-guide/" description="Pre-configured mining setup for all content types" />
+</Cards>
+
+<div className="guide-divider" />
+
+<span id="listening" className="guide-anchor" />
+
+## Improving Listening
+
+<div className="guide-card">
+  <p>After a while (mostly applies to anime), start hiding the subtitles and try to listen only. This trains your brain to process spoken Japanese at natural speed — a skill that reading subtitles alone won't build.</p>
+</div>
+
+<div className="guide-card">
+  <ol className="guide-steps-list">
+    <li>Hide the subtitles</li>
+    <li>Listen to a sentence</li>
+    <li>If you don't understand, turn subtitles back on</li>
+    <li>Look up 1–2 words if needed</li>
+    <li>Listen again while reading, then hide subs and try once more</li>
+  </ol>
+</div>
+
+<Cards>
+  <Card title="Intensive Listening Guide" href="https://www.youtube.com/watch?v=o8857j-RwhA" description="A practical guide to improving listening through repetition, subtitle toggling, and active listening" />
+</Cards>
+
+<div className="guide-divider" />
+
+{/* ── OUTPUT ── */}
+<span id="output-section" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--orange">🚀</div>
+  <div>
+    <p className="guide-step-title">Step 4: Output — Speaking &amp; Writing</p>
+    <p className="guide-step-sub">Months 6+ · Start using Japanese</p>
+  </div>
+</div>
+
+<span id="speaking" className="guide-anchor" />
+
+<div className="guide-card">
+  <p>Output means producing Japanese yourself — texting, writing, speaking. It's the flip side of immersion, and it's how passive knowledge becomes active.</p>
+  <p><strong>Input comes first.</strong> You can't naturally say things you haven't already absorbed. If you find yourself constantly translating from English into Japanese word-by-word, that's a sign you need more input before pushing output hard. A good rule of thumb: if you can read a Japanese sentence and feel when something <em>sounds off</em> — even if you can't explain why — you're ready to start.</p>
+  <p>That said, there's no need to wait until you're "perfect". Chatting casually with people at a low level is fine and won't hurt you.</p>
+</div>
+
+### What good output actually requires
+
+<div className="guide-card">
+  <p>Output isn't just grammar. There are three things that make Japanese feel natural:</p>
+  <ul className="guide-bullet-list">
+    <li><strong>Grammar</strong> — getting the structure right (but note: some "wrong" grammar like すごい美味しい has become normal modern usage)</li>
+    <li><strong>Word choice</strong> — using words the way native speakers actually use them, not just translating English phrases directly</li>
+    <li><strong>Social framing</strong> — knowing what to say in a given situation; politeness levels, how to respond to compliments, when to use certain expressions</li>
+  </ul>
+  <p>The third one is the hardest, and it mostly comes from immersing in real conversational content — not textbooks.</p>
+</div>
+
+### Ways to practice output
+
+<div className="guide-card">
+  <ul className="guide-bullet-list">
+    <li><strong>Chat with native speakers</strong> — language exchange servers (like EJLX Discord), apps like HelloTalk or Tandem, or hire a tutor on italki</li>
+    <li><strong>Write a diary</strong> — write a few sentences in Japanese each day, then re-read them later and mark anything that feels off. You don't need to fix it immediately — just notice it. Your immersion will fill in the gaps over time.</li>
+    <li><strong>Internal narration</strong> — try narrating your day in your head in Japanese. "I'm making tea now." It sounds silly but it surfaces words you don't know yet and gets your brain used to thinking in Japanese.</li>
+    <li><strong>Watch conversational content attentively</strong> — livestreams, podcasts, or casual YouTube videos with two people talking. Pay attention not just to what they say but <em>how</em> they say it — transitions, reactions, filler words, how they start and end thoughts.</li>
+  </ul>
+</div>
+
+<Callout type="info">
+  The fastest way to improve output isn't drills — it's finding a community or group of people you actually want to talk to in Japanese. When you care about the conversation, the language improves naturally.
+</Callout>
+
+<Cards>
+  <Card title="Learning to Output" href="https://morg.systems/Learning-to-Output" description="In-depth guide to developing natural speaking and writing ability" />
+</Cards>
+
+<div className="guide-routine guide-routine--orange">
+  <div className="guide-routine-header">
+    <span>🚀</span>
+    <p className="guide-routine-title">Output &amp; Mastery Stage</p>
+  </div>
+  <ul className="guide-routine-list">
+    <li>Read light novels &amp; visual novels</li>
+    <li>Start speaking &amp; writing (text first)</li>
+    <li>Practice output with corrections</li>
+    <li>Prepare for JLPT N5 → N1</li>
+  </ul>
+</div>
+
+<div className="guide-divider" />
+
+<span id="next-steps" className="guide-anchor" />
+
+## Next Steps After Basics
+
+<div className="guide-card">
+  <p>Once you've been immersing for a few months and things are starting to click, you can start expanding:</p>
+  <ul className="guide-bullet-list">
+    <li><strong>Light novels</strong> — pure reading, great for pushing your vocabulary and reading speed</li>
+    <li><strong>Visual novels</strong> — story-rich, voiced content; perfect for mixing reading and listening</li>
+    <li><strong>Learn to write</strong> — optional, but useful if you want to communicate in Japanese</li>
+    <li><strong>Try JLPT practice tests</strong> — gives you a clear sense of where you're at</li>
+    <li><strong>Start output</strong> — once you have a solid base of input, see the Output section above</li>
+  </ul>
+</div>
+
+<div className="guide-divider" />
+
+<span id="quickstart" className="guide-anchor" />
+
+## Quick Start Checklist
+
+<div className="guide-card">
+  <div className="guide-checklist-item"><div className="guide-check-sq" /> Finish Hiragana &amp; Katakana</div>
+  <div className="guide-checklist-item"><div className="guide-check-sq" /> Install Anki + start 5–20 words daily</div>
+  <div className="guide-checklist-item"><div className="guide-check-sq" /> Read basic grammar guide</div>
+  <div className="guide-checklist-item"><div className="guide-check-sq" /> Set up ASBPlayer + Yomitan</div>
+  <div className="guide-checklist-item"><div className="guide-check-sq" /> Pick your content type and get set up</div>
+  <div className="guide-checklist-item"><div className="guide-check-sq" /> Immerse for at least 1 hour today</div>
+</div>
+
+<div className="guide-divider" />
+
+<span id="resources" className="guide-anchor" />
+
+## Further Reading
+
+<Cards>
+  <Card title="JP Lazy Guide" href="https://lazyguidejp.github.io/jp-lazy-guide/" description="Pre-configured setup guides for all content types" />
+  <Card title="Learning to Output" href="https://morg.systems/Learning-to-Output" description="In-depth guide to natural speaking and writing" />
+  <Card title="Tae Kim Grammar" href="https://guidetojapanese.org/learn/" description="Classic beginner grammar guide" />
+  <Card title="Anki Tutorial" href="https://www.youtube.com/watch?v=DcY2Svs3h8M" description="How to use Anki properly" />
+</Cards>
+
+<div className="guide-divider" />
+
+<p className="guide-footer">Have questions? Join our Discord! · Consistency is more important than speed. 頑張って！</p>
+
+</div>{/* end guide-main */}
+</div>{/* end guide-layout */}
