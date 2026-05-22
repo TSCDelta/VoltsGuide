@@ -18,9 +18,9 @@ const HERO_BADGE = 'Absolute beginner friendly';
 const CTA_PRIMARY = { label: 'Start Learning', href: '/docs/guide' };
 
 const STAT_CARDS = [
-  { number: '3', label: 'Learning Stages' },
+  { number: '3', label: 'JPA stab count' },
   { number: 'Free', label: 'Always' },
-  { number: '∞', label: 'Resources' },
+  { number: '0', label: 'Will to live?' },
 ];
 
 // Learning path steps — replaces the filler Featured grid
