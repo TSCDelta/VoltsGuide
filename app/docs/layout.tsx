@@ -24,6 +24,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         ),
       }}
       sidebar={{}}
+      containerProps={{
+        className: '!max-w-none w-full',
+      }}
     >
       {children}
     </DocsLayout>

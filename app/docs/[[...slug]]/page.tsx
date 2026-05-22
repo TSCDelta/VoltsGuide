@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   return (
     <DocsPage
       toc={page.data.toc}
-      full={page.data.full}
+      full
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
