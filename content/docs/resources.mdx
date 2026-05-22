@@ -1,0 +1,334 @@
+---
+title: Resources
+description: All tools, setup guides, and recommendations in one place.
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Cards, Card } from 'fumadocs-ui/components/card';
+
+<div className="guide-layout">
+
+{/* ── LEFT SIDEBAR ─────────────────────────────────────── */}
+<aside className="guide-sidebar">
+  <p className="guide-sidebar-label">Content Type</p>
+  <a href="#essentials" className="guide-nav-item guide-nav-item--active">
+    <span className="guide-nav-num">⚙️</span>
+    <span>Essentials</span>
+  </a>
+  <div className="guide-nav-connector" />
+  <a href="#anime" className="guide-nav-item">
+    <span className="guide-nav-num">📺</span>
+    <span>Anime</span>
+  </a>
+  <a href="#anime-where" className="guide-nav-sub">↳ Where to Watch</a>
+  <a href="#anime-tools" className="guide-nav-sub">↳ Tools & Setup</a>
+  <div className="guide-nav-connector" />
+  <a href="#manga" className="guide-nav-item">
+    <span className="guide-nav-num">📖</span>
+    <span>Manga</span>
+  </a>
+  <a href="#manga-where" className="guide-nav-sub">↳ Where to Read</a>
+  <a href="#manga-tools" className="guide-nav-sub">↳ Tools & Setup</a>
+  <div className="guide-nav-connector" />
+  <a href="#light-novel" className="guide-nav-item">
+    <span className="guide-nav-num">📚</span>
+    <span>Light Novel</span>
+  </a>
+  <a href="#ln-where" className="guide-nav-sub">↳ Where to Read</a>
+  <a href="#ln-tools" className="guide-nav-sub">↳ Tools & Setup</a>
+  <div className="guide-nav-connector" />
+  <a href="#visual-novel" className="guide-nav-item">
+    <span className="guide-nav-num">🎮</span>
+    <span>Visual Novel</span>
+  </a>
+  <a href="#vn-where" className="guide-nav-sub">↳ Where to Get VNs</a>
+  <a href="#vn-tools" className="guide-nav-sub">↳ Tools & Setup</a>
+  <div className="guide-nav-connector" />
+  <a href="#misc" className="guide-nav-item">
+    <span className="guide-nav-num">🔧</span>
+    <span>Misc</span>
+  </a>
+  <a href="#misc-anki" className="guide-nav-sub">↳ Anki & Decks</a>
+  <a href="#misc-dictionaries" className="guide-nav-sub">↳ Dictionaries</a>
+  <a href="#misc-guides" className="guide-nav-sub">↳ Further Guides</a>
+</aside>
+
+{/* ── MAIN CONTENT ─────────────────────────────────────── */}
+<div className="guide-main">
+
+<p className="guide-intro">
+  Everything you need to immerse in Japanese, organised by content type. Each section covers where to find content and what tools to use to get the most out of it — including Yomitan lookups, sentence mining, and Anki integration.
+</p>
+
+<Callout type="info">
+  **Not sure where to start?** Set up the **Essentials** first (Anki + Yomitan), then pick whichever content type you enjoy most and follow that section.
+</Callout>
+
+<div className="guide-divider" />
+
+{/* ── ESSENTIALS ── */}
+<span id="essentials" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--blue">⚙️</div>
+  <div>
+    <p className="guide-step-title">Essentials</p>
+    <p className="guide-step-sub">Set these up before anything else</p>
+  </div>
+</div>
+
+<p className="guide-intro">These tools are shared across every content type. Set them up once and they'll work everywhere.</p>
+
+<div className="guide-card">
+  <p><strong>Anki</strong> is a spaced-repetition flashcard app — it shows you words right before you're about to forget them. It's the single most effective tool for vocabulary retention and you'll use it throughout your learning.</p>
+  <p><strong>Yomitan</strong> is a browser extension that lets you hover over any Japanese word to instantly get its reading, meaning, and pitch accent. It also integrates directly with Anki for one-click mining.</p>
+  <p><strong>ShareX</strong> (PC only) handles screenshots and screen capture for mining — used alongside Yomitan to add images and audio to your Anki cards automatically.</p>
+</div>
+
+<Cards>
+  <Card title="Download Anki" href="https://apps.ankiweb.net/" description="Free flashcard app — available on all platforms" />
+  <Card title="Setup: Anki (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupAnki/" description="Preconfigured Anki setup with Lapis note format" />
+  <Card title="Setup: Yomitan on PC" href="https://lazyguidejp.github.io/jp-lazy-guide/setupYomitanOnPC/" description="Full Yomitan setup guide for desktop browsers" />
+  <Card title="Setup: Yomitan on Android" href="https://lazyguidejp.github.io/jp-lazy-guide/setupYomitanOnAndroid/" description="Yomitan setup for mobile (Kiwi Browser)" />
+  <Card title="Setup: ShareX" href="https://lazyguidejp.github.io/jp-lazy-guide/setupShareX/" description="Screen capture tool for mining screenshots and audio" />
+</Cards>
+
+<div className="guide-divider" />
+
+{/* ── ANIME ── */}
+<span id="anime" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--red">📺</div>
+  <div>
+    <p className="guide-step-title">Anime</p>
+    <p className="guide-step-sub">Best content type for beginners — visual context makes it easier</p>
+  </div>
+</div>
+
+<p className="guide-intro">Anime is one of the best ways to start immersing. The combination of audio, visuals, and Japanese subtitles gives you a lot of context, and watching something you already enjoy keeps motivation high.</p>
+
+<Callout type="info">
+  Start with anime you've already seen in English — knowing the story gives you a huge comprehension boost at the beginning.
+</Callout>
+
+<span id="anime-where" className="guide-anchor" />
+
+#### Where to Watch
+
+<div className="guide-card">
+  <p>You need to watch with <strong>Japanese subtitles</strong>, not English. The tools below either let you load your own subtitle files, or pull Japanese subtitles from streaming platforms automatically.</p>
+</div>
+
+<Cards>
+  <Card title="Animelon" href="https://animelon.com/" description="Stream anime with built-in Japanese subtitles and word lookup" />
+  <Card title="Jimaku" href="https://jimaku.cc/" description="Download Japanese subtitle files (.srt / .ass) for almost any anime" />
+  <Card title="Kitsunekko" href="https://kitsunekko.net/" description="Another source for Japanese subtitle files" />
+</Cards>
+
+<span id="anime-tools" className="guide-anchor" />
+
+#### Tools & Setup
+
+<div className="guide-card">
+  <p><strong>asbplayer</strong> is a browser-based video player that lets you load your anime file alongside a Japanese subtitle file. Hover over any word to use Yomitan, and press a single shortcut to send the word, screenshot, and audio clip directly to Anki.</p>
+  <p>It also works as a browser extension for streaming platforms like YouTube or Netflix — useful if you find Japanese content there.</p>
+</div>
+
+<Cards>
+  <Card title="asbplayer" href="https://killergerbah.github.io/asbplayer/" description="Browser video player with Yomitan and Anki integration" />
+  <Card title="asbplayer Chrome Extension" href="https://chromewebstore.google.com/detail/asbplayer-language-learni/hkledmpjpaehamkiehglnbelcpdflcab" description="For mining from streaming sites like Netflix or YouTube" />
+  <Card title="Setup: Anime on PC (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupAnimeOnPC/" description="Full step-by-step guide to asbplayer + Anki mining" />
+  <Card title="Setup: Anime on Android (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupAnimeOnAndroid/" description="How to set up anime immersion on mobile" />
+</Cards>
+
+<div className="guide-divider" />
+
+{/* ── MANGA ── */}
+<span id="manga" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--green">📖</div>
+  <div>
+    <p className="guide-step-title">Manga</p>
+    <p className="guide-step-sub">Great for reading practice — especially slice-of-life for beginners</p>
+  </div>
+</div>
+
+<p className="guide-intro">Manga is a natural next step after anime, or a great parallel activity. Because the text is static, you can take your time with each panel. Slice-of-life manga tends to use simpler, more everyday vocabulary — a good starting point.</p>
+
+<span id="manga-where" className="guide-anchor" />
+
+#### Where to Read
+
+<Cards>
+  <Card title="Mokuro Reader" href="https://reader.mokuro.app/" description="Read pre-processed manga in browser with full Yomitan support" />
+  <Card title="Bilingual Manga" href="https://bilingualmanga.net/" description="Side-by-side Japanese/English manga for beginners" />
+  <Card title="Itazuraneko" href="https://itazuraneko.neocities.org/library/manga" description="Large archive of raw Japanese manga downloads" />
+</Cards>
+
+<span id="manga-tools" className="guide-anchor" />
+
+#### Tools & Setup
+
+<div className="guide-card">
+  <p>Manga text is embedded in images, so you can't hover over it directly. There are two approaches:</p>
+  <p><strong>Mokuro</strong> pre-processes manga pages so every speech bubble becomes selectable text — you can then hover with Yomitan as normal. This is the smoothest experience once set up.</p>
+  <p><strong>OCR</strong> (via owocr + ShareX) lets you draw a box around any text on screen and have it scanned and sent to Yomitan's search page instantly. More flexible — works on any image, any app.</p>
+  <p><strong>CDisplayEx</strong> is a clean manga reader for PC.</p>
+</div>
+
+<Cards>
+  <Card title="Setup: Manga on PC (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupMangaOnPC/" description="OCR setup + Mokuro processing guide — pick whichever fits" />
+  <Card title="Setup: Manga on Android (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupMangaOnAndroid/" description="Mobile manga reading setup with Yomitan" />
+  <Card title="Mokuro (GitHub)" href="https://github.com/kha-white/mokuro" description="Tool that pre-processes manga for hoverable text" />
+  <Card title="CDisplayEx" href="https://www.cdisplayex.com/desktop/" description="Clean manga reader for PC" />
+  <Card title="Mokuro Online Processor" href="https://colab.research.google.com/drive/1k-M1zr4hBnZTxlRODtNFn9r08XS5bKYB?usp=sharing" description="Process your manga online via Google Colab — no local setup needed" />
+</Cards>
+
+<div className="guide-divider" />
+
+{/* ── LIGHT NOVEL ── */}
+<span id="light-novel" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--blue">📚</div>
+  <div>
+    <p className="guide-step-title">Light Novel</p>
+    <p className="guide-step-sub">Pure reading — great for vocab depth and reading speed</p>
+  </div>
+</div>
+
+<p className="guide-intro">Light novels are text-heavy and a step up from manga, but they're excellent for pushing vocabulary and reading fluency. Most are available as epubs and read cleanly in a browser reader with Yomitan hovers.</p>
+
+<span id="ln-where" className="guide-anchor" />
+
+#### Where to Read
+
+<Cards>
+  <Card title="TTU Reader" href="https://reader.ttsu.app/" description="Browser epub reader with full Yomitan support — just upload your file" />
+  <Card title="Itazuraneko" href="https://itazuraneko.neocities.org/library/shousetu" description="Large library of Japanese light novel epub downloads" />
+  <Card title="Archive.org Japanese Books" href="https://archive.org/details/japaneselanguage" description="Free epub and PDF Japanese books" />
+</Cards>
+
+<span id="ln-tools" className="guide-anchor" />
+
+#### Tools & Setup
+
+<div className="guide-card">
+  <p><strong>TTU (The Typhoon Reader)</strong> is the standard tool for reading light novels in browser. Upload your epub, open it, and Yomitan works on every word immediately — no extra configuration needed. It stores your library and reading position locally.</p>
+</div>
+
+<Cards>
+  <Card title="Setup: LN on PC (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupLnOnPC/" description="TTU Reader setup + Yomitan text replacement patterns" />
+  <Card title="Setup: LN on Android (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupLnOnAndroid/" description="Mobile light novel reading setup" />
+</Cards>
+
+<div className="guide-divider" />
+
+{/* ── VISUAL NOVEL ── */}
+<span id="visual-novel" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--orange">🎮</div>
+  <div>
+    <p className="guide-step-title">Visual Novel</p>
+    <p className="guide-step-sub">Story-rich voiced content — the best of reading and listening combined</p>
+  </div>
+</div>
+
+<p className="guide-intro">Visual novels mix reading with full voice acting, making them excellent for both vocabulary and listening. The text advances at your pace, so you can look up words without missing anything. A favourite format for serious immersion learners.</p>
+
+<span id="vn-where" className="guide-anchor" />
+
+#### Where to Get VNs
+
+<Cards>
+  <Card title="VNDB" href="https://vndb.org/" description="Complete database of visual novels — use to find titles and check language" />
+  <Card title="Itazuraneko VN Library" href="https://itazuraneko.neocities.org/library/vn" description="Archive of Japanese visual novel downloads" />
+</Cards>
+
+<span id="vn-tools" className="guide-anchor" />
+
+#### Tools & Setup
+
+<div className="guide-card">
+  <p>VNs require a <strong>texthooker</strong> setup — a tool that extracts the in-game dialogue and sends it to a browser page where Yomitan can read it. The standard tool is <strong>Textractor</strong>.</p>
+  <p>The setup is: Textractor (hooks game text) → Texthooker page in browser (displays text) → Yomitan (hovers on words). Once running, it's seamless.</p>
+  <p>You'll also need to set your <strong>system locale to Japanese</strong> for most VNs to run correctly on Windows.</p>
+</div>
+
+<Callout type="warn">
+  Most Japanese VNs are Windows-only. If you're on Mac or Linux, see the Linux overview on Lazy Guide for options.
+</Callout>
+
+<Cards>
+  <Card title="Setup: VN on PC (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupVnOnPC/" description="Full Textractor + Texthooker page setup guide" />
+  <Card title="Setup: VN on Android (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupVnOnAndroid/" description="How to play and hook VNs on Android" />
+  <Card title="Textractor (GitHub)" href="https://github.com/Artikash/Textractor" description="The text extraction tool used with most VNs" />
+  <Card title="Android Texthook Guide" href="https://rentry.co/android-texthook" description="Alternative setup if you want the texthooker page on your phone instead of a second monitor" />
+</Cards>
+
+<div className="guide-divider" />
+
+{/* ── MISC ── */}
+<span id="misc" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--blue">🔧</div>
+  <div>
+    <p className="guide-step-title">Miscellaneous</p>
+    <p className="guide-step-sub">Anki decks, dictionaries, and further reading</p>
+  </div>
+</div>
+
+<span id="misc-anki" className="guide-anchor" />
+
+#### Anki & Decks
+
+<div className="guide-card">
+  <p>Start with <strong>Kaishi 1.5k</strong> — a curated deck of 1,500 high-frequency words, each with audio and example sentences. It's the community's recommended beginner deck and replaces older options like Core 2k/6k. Once you're immersing, you'll supplement or replace it with your own mined cards.</p>
+</div>
+
+<Cards>
+  <Card title="Kaishi 1.5k" href="https://github.com/donkuri/kaishi" description="Best beginner Anki deck — 1,500 high-frequency words with audio" />
+  <Card title="Anki Tutorial" href="https://www.youtube.com/watch?v=DcY2Svs3h8M" description="How to set up Anki and use it effectively" />
+  <Card title="Lazy Guide Deck Resources" href="https://lazyguidejp.github.io/jp-lazy-guide/resourcesDecks/" description="Modern Core 2.3k and Modern Kanken decks" />
+  <Card title="Immersion Tracker Spreadsheet" href="https://docs.google.com/spreadsheets/d/1ilxQY6-bdt6tnjeEMbg8vJZqys7elE-XrQrFaJtW65Y/edit?usp=sharing" description="Log and track your daily immersion hours up to 2035" />
+</Cards>
+
+<span id="misc-dictionaries" className="guide-anchor" />
+
+#### Dictionaries
+
+<div className="guide-card">
+  <p>You'll use Yomitan for most lookups while immersing. These sites are useful for looking things up manually, checking example sentences, or going deeper on a word.</p>
+</div>
+
+<Cards>
+  <Card title="Jisho" href="https://jisho.org/" description="The most popular JP–EN dictionary online — good for quick lookups" />
+  <Card title="Takoboto" href="https://takoboto.jp/" description="Clean dictionary app available on Android and web" />
+  <Card title="Weblio" href="https://www.weblio.jp/" description="Japanese–Japanese dictionary — good for going monolingual" />
+  <Card title="Forvo" href="https://forvo.com/languages/ja/" description="Native speaker audio pronunciation database" />
+</Cards>
+
+<span id="misc-guides" className="guide-anchor" />
+
+#### Further Guides
+
+<Cards>
+  <Card title="Lazy Guide" href="https://lazyguidejp.github.io/jp-lazy-guide/" description="Preconfigured, spoonfed setup for all content types — everything in one import" />
+  <Card title="Donkuri's Guide" href="https://donkuri.github.io/learn-japanese/" description="Detailed, thorough guide for those who want to understand the why behind everything" />
+  <Card title="Ten's Guide" href="https://www.ten.guide/" description="A middle ground — detailed but practical, good overall reference" />
+  <Card title="Learning to Output" href="https://morg.systems/Learning-to-Output" description="In-depth guide on developing natural speaking and writing" />
+  <Card title="Tae Kim's Grammar Guide" href="https://guidetojapanese.org/learn/" description="The classic beginner grammar reference" />
+  <Card title="Pitch Accent Overview" href="https://docs.google.com/document/d/1ReBf08JFK4n0PXdOxThAfWuiK9UWVZEWWzeKSECWTQo/edit" description="Short, practical intro to Japanese pitch accent" />
+  <Card title="Kuuube Minimal Pairs" href="https://kuuuube.github.io/minimal-pairs/" description="Train your ear to distinguish pitch accent differences" />
+</Cards>
+
+<div className="guide-divider" />
+
+<p className="guide-footer">Missing something? Join our Discord and let us know! · 頑張って！</p>
+
+</div>{/* end guide-main */}
+</div>{/* end guide-layout */}
