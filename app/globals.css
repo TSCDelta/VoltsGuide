@@ -144,7 +144,7 @@
   }
 
   .guide-divider {
-    @apply my-8;
+    @apply my-6;
     height: 1px;
     background: var(--guide-border);
   }
@@ -162,7 +162,7 @@
 
   /* ── Step headers ────────────────────────────────────────── */
   .guide-step-header {
-    @apply flex items-center gap-[14px] mb-[14px];
+    @apply flex items-center gap-[14px] mb-[10px];
   }
 
   .guide-step-icon {
@@ -199,9 +199,23 @@
   .guide-card p:last-child { @apply mb-0; }
   .guide-card strong { color: var(--guide-text); }
 
+  /* ── Stage grid ─────────────────────────────────────────── */
+  .guide-stage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  /* Stage 1 → top-left, Stage 2 → top-right, Stage 3 → full bottom row */
+  .guide-stage-grid > .guide-stage:nth-child(1) { grid-column: 1; }
+  .guide-stage-grid > .guide-stage:nth-child(2) { grid-column: 2; }
+  .guide-stage-grid > .guide-stage:nth-child(3) { grid-column: 1 / -1; }
+
   /* ── Stage cards ─────────────────────────────────────────── */
   .guide-stage {
-    @apply rounded-[14px] p-5 mb-4;
+    @apply rounded-[14px] mb-0;
+    padding: 18px 20px;
   }
   .guide-stage--blue {
     border: 1px solid hsla(200, 88%, 58%, 0.25);
@@ -222,14 +236,14 @@
   .guide-stage-emoji { @apply text-[20px]; }
 
   .guide-stage-title {
-    @apply m-0 text-[16px] font-bold;
+    @apply m-0 text-[17px] font-bold;
   }
   .guide-stage--blue   .guide-stage-title { color: var(--guide-accent); }
   .guide-stage--green  .guide-stage-title { color: var(--guide-green); }
   .guide-stage--orange .guide-stage-title { color: var(--guide-orange); }
 
   .guide-stage-timing {
-    @apply m-0 mt-px text-[11px];
+    @apply m-0 mt-px text-[12px];
   }
   .guide-stage--blue   .guide-stage-timing { color: hsla(200, 88%, 58%, 0.7); }
   .guide-stage--green  .guide-stage-timing { color: hsla(150, 60%, 45%, 0.7); }
