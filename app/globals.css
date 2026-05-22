@@ -63,21 +63,12 @@
   }
 
   /* ── Sidebar ─────────────────────────────────────────────── */
-  .guide-sidebar {
-    @apply sticky shrink-0 overflow-y-auto px-[10px] py-[18px];
-    top: 64px;               /* clear the Fumadocs topbar */
-    width: 240px;
-    max-height: calc(100vh - 64px);
-    background: var(--guide-bg2);
-    border-right: 1px solid var(--guide-border);
-    scrollbar-width: thin;
-    scrollbar-color: var(--guide-border2) transparent;
-  }
-  .guide-sidebar::-webkit-scrollbar { width: 4px; }
-  .guide-sidebar::-webkit-scrollbar-thumb {
-    background: var(--guide-border2);
-    @apply rounded;
-  }
+  /*
+   * Fumadocs renders its own left sidebar with the page tree.
+   * .guide-sidebar duplicates that nav, so hide it entirely and
+   * let Fumadocs handle navigation.
+   */
+  .guide-sidebar { display: none; }
 
   .guide-sidebar-label {
     @apply block px-[10px] mb-2 text-[10px] font-bold uppercase tracking-widest;
@@ -141,7 +132,7 @@
 
   /* ── Main content ────────────────────────────────────────── */
   .guide-main {
-    @apply flex-1 min-w-0 px-[48px] py-[28px];
+    @apply w-full min-w-0 px-[48px] py-[28px];
   }
 
   /* ── Helpers ─────────────────────────────────────────────── */
