@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fd-background: 215 28% 6%;     /* Deep space/night earth */
+  --fd-foreground: 210 20% 95%;
+  --fd-muted: 220 25% 12%;
+  --fd-muted-foreground: 215 15% 55%;
+  --fd-border: 215 20% 18%;
+  
+  /* Gaia Primary - Earth's Red */
+  --fd-primary: 355 85% 62%;       /* Vibrant Gaia red */
+  --fd-primary-foreground: 215 30% 8%;
+  
+  /* Accent - Ocean Blue + Gold */
+  --fd-accent: 200 88% 58%;        /* Ocean Light blue */
+  --fd-accent-foreground: 215 30% 8%;
+  
+  --fd-gold: 48 92% 68%;           /* Gold highlights */
+}
