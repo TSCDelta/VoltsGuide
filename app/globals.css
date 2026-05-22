@@ -14,8 +14,13 @@
   --fd-primary-foreground: 215 30% 8%;
   
   /* Accent - Ocean Blue + Gold */
-  --fd-accent: 200 88% 58%;        /* Ocean Light blue */
-  --fd-accent-foreground: 215 30% 8%;
+/* Card */
+--fd-card:             217 25% 10%;
+--fd-card-foreground:  210 20% 95%;
+
+/* Accent - toned down so fumadocs Card bg isn't blinding */
+--fd-accent:           200 35% 18%;
+--fd-accent-foreground: 200 80% 88%;
   
   --fd-gold: 48 92% 68%;           /* Gold highlights */
 
