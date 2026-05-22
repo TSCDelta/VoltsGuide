@@ -12,8 +12,10 @@ type Params = {
   slug?: string[];
 };
 
-export default async function Page({ params }: { params: Params }) {
-  const page = source.getPage(params.slug);
+export default async function Page({ params }: { params: Promise<Params> }) {
+  const { slug } = await params;
+
+  const page = source.getPage(slug);
 
   if (!page) notFound();
 
@@ -38,8 +40,10 @@ export async function generateStaticParams() {
   return source.generateParams();
 }
 
-export async function generateMetadata({ params }: { params: Params }) {
-  const page = source.getPage(params.slug);
+export async function generateMetadata({ params }: { params: Promise<Params> }) {
+  const { slug } = await params;
+
+  const page = source.getPage(slug);
 
   if (!page) notFound();
 
