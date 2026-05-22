@@ -180,7 +180,7 @@ export default function HomePage() {
             ))}
           </nav>
           <Link
-            href={DISCORD_INVITE}
+            href={'https://discord.gg/jpacademy'}
             className="rounded-full bg-fd-primary px-4 py-1.5 text-sm font-medium text-fd-primary-foreground hover:opacity-90 transition-opacity"
           >
             Join Discord
@@ -339,13 +339,13 @@ export default function HomePage() {
             </p>
             <div className="flex justify-center gap-4">
               <Link
-                href={DISCORD_INVITE}
+                href={'https://discord.gg/jpacademy'}
                 className="rounded-lg bg-fd-primary px-6 py-3 font-semibold text-fd-primary-foreground hover:opacity-90 transition-opacity"
               >
                 Join Discord
               </Link>
               <Link
-                href={GITHUB_URL}
+                href={'https://github.com/TSCDelta/VoltsGuide'}
                 className="rounded-lg border border-fd-border px-6 py-3 font-semibold hover:bg-fd-muted transition-colors"
               >
                 GitHub
