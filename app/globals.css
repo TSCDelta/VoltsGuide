@@ -41,6 +41,18 @@
 }
 
 /* ─────────────────────────────────────────────────────────────
+   FUMADOCS CONTENT WIDTH OVERRIDE
+   Fumadocs caps the article/prose area at ~65ch by default.
+   Override it so the guide page uses all available space.
+───────────────────────────────────────────────────────────── */
+article.fd-content,
+.fd-article,
+[data-full-width] article,
+.prose {
+  max-width: none !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
    GUIDE PAGE COMPONENTS
    All classes are prefixed "guide-" to avoid collisions with
    Fumadocs internals. Everything that can't be expressed as a
