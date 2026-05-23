@@ -23,6 +23,11 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <a href="#anime-where" className="guide-nav-sub">↳ Where to Watch</a>
   <a href="#anime-tools" className="guide-nav-sub">↳ Tools & Setup</a>
   <div className="guide-nav-connector" />
+  <a href="#movies-tv" className="guide-nav-item">
+    <span className="guide-nav-num">🎬</span>
+    <span>Movies & TV</span>
+  </a>
+  <div className="guide-nav-connector" />
   <a href="#manga" className="guide-nav-item">
     <span className="guide-nav-num">📖</span>
     <span>Manga</span>
@@ -44,12 +49,18 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <a href="#vn-where" className="guide-nav-sub">↳ Where to Get VNs</a>
   <a href="#vn-tools" className="guide-nav-sub">↳ Tools & Setup</a>
   <div className="guide-nav-connector" />
+  <a href="#audiobooks" className="guide-nav-item">
+    <span className="guide-nav-num">🎧</span>
+    <span>Audiobooks & Podcasts</span>
+  </a>
+  <div className="guide-nav-connector" />
   <a href="#misc" className="guide-nav-item">
     <span className="guide-nav-num">🔧</span>
     <span>Misc</span>
   </a>
   <a href="#misc-anki" className="guide-nav-sub">↳ Anki & Decks</a>
   <a href="#misc-dictionaries" className="guide-nav-sub">↳ Dictionaries</a>
+  <a href="#misc-sentence-search" className="guide-nav-sub">↳ Sentence Search</a>
   <a href="#misc-guides" className="guide-nav-sub">↳ Further Guides</a>
 </aside>
 
@@ -87,6 +98,8 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
 
 <Cards>
   <Card title="Download Anki" href="https://apps.ankiweb.net/" description="Free flashcard app — available on all platforms" />
+  <Card title="AnkiDroid (Android)" href="https://play.google.com/store/apps/details?id=com.ichi2.anki" description="Free Anki app for Android" />
+  <Card title="AnkiMobile (iOS)" href="https://apps.apple.com/us/app/ankimobile-flashcards/id373493387" description="Official Anki app for iOS — paid" />
   <Card title="Setup: Anki (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupAnki/" description="Preconfigured Anki setup with Lapis note format" />
   <Card title="Setup: Yomitan on PC" href="https://lazyguidejp.github.io/jp-lazy-guide/setupYomitanOnPC/" description="Full Yomitan setup guide for desktop browsers" />
   <Card title="Setup: Yomitan on Android" href="https://lazyguidejp.github.io/jp-lazy-guide/setupYomitanOnAndroid/" description="Yomitan setup for mobile (Kiwi Browser)" />
@@ -122,6 +135,11 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
 
 <Cards>
   <Card title="Anizone" href="https://anizone.to/" description="Stream anime with subtitles that you can disable (works with asbplayer)" />
+  <Card title="Aniwatchtv" href="https://aniwatchtv.to/" description="Active HiAnime mirror — switch to Japanese audio and disable subtitles" />
+  <Card title="Anime Nexus" href="https://anime.nexus/" description="Stream anime with subtitles off; smaller library than HiAnime" />
+  <Card title="Animelon" href="https://animelon.com/" description="Stream anime with built-in Japanese subtitles" />
+  <Card title="Crunchyroll" href="https://www.crunchyroll.com" description="Free with ads — can turn subtitles off" />
+  <Card title="Nyaa.si" href="https://nyaa.si/?q=&f=0&c=1_4" description="Torrent tracker for raw anime — use qBittorrent" />
   <Card title="Jimaku" href="https://jimaku.cc/" description="Download Japanese subtitle files (.srt / .ass) for almost any anime" />
 </Cards>
 
@@ -132,13 +150,40 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
 <div className="guide-card">
   <p><strong>asbplayer</strong> is a browser-based video player that lets you load your anime file alongside a Japanese subtitle file. Hover over any word to use Yomitan, and press a single shortcut to send the word, screenshot, and audio clip directly to Anki.</p>
   <p>It also works as a browser extension for streaming platforms like YouTube or Netflix — useful if you find Japanese content there.</p>
+  <p><strong>Manatan</strong> is an all-in-one app (Desktop, iOS, Android) that handles anime, manga, and novels with built-in OCR and subtitle dictionary lookups.</p>
 </div>
 
 <Cards>
   <Card title="asbplayer" href="https://killergerbah.github.io/asbplayer/" description="Browser video player with Yomitan and Anki integration" />
   <Card title="asbplayer Chrome Extension" href="https://chromewebstore.google.com/detail/asbplayer-language-learni/hkledmpjpaehamkiehglnbelcpdflcab" description="For mining from streaming sites like Netflix or YouTube" />
+  <Card title="Manatan" href="https://github.com/KolbyML/Manatan" description="All-in-one app for anime, manga, and novels with OCR/subtitle lookups — Desktop, iOS, Android" />
   <Card title="Setup: Anime on PC (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupAnimeOnPC/" description="Full step-by-step guide to asbplayer + Anki mining" />
   <Card title="Setup: Anime on Android (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupAnimeOnAndroid/" description="How to set up anime immersion on mobile" />
+</Cards>
+
+<div className="guide-divider" />
+
+{/* ── MOVIES & TV ── */}
+<span id="movies-tv" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--red">🎬</div>
+  <div>
+    <p className="guide-step-title">Movies & TV (J-Drama)</p>
+    <p className="guide-step-sub">Real-world Japanese speech — great for listening practice</p>
+  </div>
+</div>
+
+<p className="guide-intro">J-dramas and Japanese films expose you to more naturalistic, everyday Japanese speech compared to anime. They pair well with asbplayer for subtitle-based lookups.</p>
+
+<Cards>
+  <Card title="Bagikuy" href="https://bagikuy.com/" description="J-drama download links" />
+  <Card title="Minidrama" href="https://minidrama.net/j-drama/" description="MKV downloads for J-drama" />
+  <Card title="Raredoramas" href="https://raredoramas.info/" description="Site for collecting rare J-Drama" />
+  <Card title="Rakuten Viki" href="https://www.viki.com/explore?country=japan&sort=all_time" description="Stream some J-drama" />
+  <Card title="Japanese Live TV Streams" href="https://web.utako.moe/" description="Live Japanese TV channels — watch in VLC or similar" />
+  <Card title="ABEMA" href="https://abema.tv/" description="Japanese streaming TV — requires Japanese VPN outside Japan" />
+  <Card title="Japanese Media Recommendations List" href="https://docs.google.com/spreadsheets/d/1w42HEKEu2AzZg9K7PI0ma9ICmr2qYEKQ9IF4XxFSnQU/" description="Community spreadsheet of Japanese media with difficulty ratings" />
 </Cards>
 
 <div className="guide-divider" />
@@ -164,6 +209,10 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <Card title="Mokuro Reader" href="https://reader.mokuro.app/" description="Read pre-processed manga in browser with full Yomitan support" />
   <Card title="Bilingual Manga" href="https://dl-raw.ac/" description="Raw Manga files" />
   <Card title="KLManga" href="https://klz9.com/index" description="Online Manga Resource" />
+  <Card title="mangareader.to" href="https://mangareader.to" description="Read manga online" />
+  <Card title="Rawkuma" href="https://rawkuma.com/" description="Read raw manga online" />
+  <Card title="Hakuneko Manga Downloader" href="https://hakuneko.download/" description="Download Japanese manga — use the 'raw' and 'japanese' tags" />
+  <Card title="Nyaa.si (raw manga)" href="https://nyaa.si/?q=&f=0&c=3_3" description="Torrent tracker with a huge selection of raw manga" />
 </Cards>
 
 <span id="manga-tools" className="guide-anchor" />
@@ -174,6 +223,7 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <p>Manga text is embedded in images, so you can't hover over it directly. There are two approaches:</p>
   <p><strong>Mokuro</strong> pre-processes manga pages so every speech bubble becomes selectable text — you can then hover with Yomitan as normal. This is the smoothest experience once set up.</p>
   <p><strong>OCR</strong> (Meikipop) lets you draw a box around any text on screen and have it scanned and sent to Yomitan's search page instantly. More flexible — works on any image, any app.</p>
+  <p><strong>Manatan</strong> is an all-in-one app with automatic OCR — the easiest option for beginners, available on Desktop, iOS, and Android.</p>
   <p><strong>CDisplayEx</strong> is a clean manga reader for PC.</p>
 </div>
 
@@ -181,9 +231,12 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <Card title="Setup: Manga on PC (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupMangaOnPC/" description="OCR setup + Mokuro processing guide — pick whichever fits" />
   <Card title="Setup: Manga on Android (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupMangaOnAndroid/" description="Mobile manga reading setup with Yomitan" />
   <Card title="Mokuro (GitHub)" href="https://github.com/kha-white/mokuro" description="Tool that pre-processes manga for hoverable text" />
-  <Card title="CDisplayEx" href="https://www.cdisplayex.com/desktop/" description="Clean manga reader for PC" />
   <Card title="Mokuro Online Processor" href="https://colab.research.google.com/drive/1k-M1zr4hBnZTxlRODtNFn9r08XS5bKYB?usp=sharing" description="Process your manga online via Google Colab — no local setup needed" />
-   <Card title="Meikipop" href="https://github.com/rtr46/meikipop" description="OCR based dictionary for fast look-ups" />
+  <Card title="Manatan" href="https://github.com/KolbyML/Manatan" description="All-in-one app with automatic manga OCR — Desktop, iOS, Android" />
+  <Card title="Meikipop" href="https://github.com/rtr46/meikipop" description="OCR based dictionary for fast look-ups" />
+  <Card title="CDisplayEx" href="https://www.cdisplayex.com/desktop/" description="Clean manga reader for PC" />
+  <Card title="Mihon (Android)" href="https://github.com/mihonapp/mihon" description="Popular open-source manga reader for Android" />
+  <Card title="Kantan Manga Reader (iOS)" href="https://apps.apple.com/us/app/kantan-manga/id1518666365" description="OCR manga reader for iOS with Yomitan dictionary support" />
 </Cards>
 
 <div className="guide-divider" />
@@ -209,6 +262,10 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <Card title="TTU Reader" href="https://reader.ttsu.app/" description="Browser epub reader with full Yomitan support — just upload your file" />
   <Card title="Kakuyomu" href="https://kakuyomu.jp/" description="Large library of Japanese Web-Novels" />
   <Card title="Syosetu" href="https://syosetu.com/" description="Another Large library of Japanese Web-Novels" />
+  <Card title="Hameln" href="https://syosetu.org/" description="Web novels and fanfiction (二次創作)" />
+  <Card title="Aozora Bunko" href="https://www.aozora.gr.jp/" description="Free Japanese literary classics — works by authors who died 50+ years ago" />
+  <Card title="Anna's Archive" href="https://annas-archive.gl/" description="Comprehensive ebook archive — has nearly everything" />
+  <Card title="Boroboro" href="https://boroboro.neocities.org/listfullepub.html" description="Collection of Japanese epub books" />
   <Card title="TMW discord (Complete Student Quiz)" href="http://discord.gg/tmw" description="Complete Student Quiz to access LN Archive" />
 </Cards>
 
@@ -218,11 +275,15 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
 
 <div className="guide-card">
   <p><strong>TTU (The Typhoon Reader)</strong> is the standard tool for reading light novels in browser. Upload your epub, open it, and Yomitan works on every word immediately — no extra configuration needed. It stores your library and reading position locally.</p>
+  <p><strong>Manatan</strong> also supports light novels and epubs with instant dictionary lookups and Anki card generation, available on Desktop, iOS, and Android.</p>
 </div>
 
 <Cards>
   <Card title="Setup: LN on PC (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupLnOnPC/" description="TTU Reader setup + Yomitan text replacement patterns" />
   <Card title="Setup: LN on Android (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupLnOnAndroid/" description="Mobile light novel reading setup" />
+  <Card title="Manatan" href="https://github.com/KolbyML/Manatan" description="All-in-one app with epub support and Anki card generation — Desktop, iOS, Android" />
+  <Card title="Hoshi Reader (iOS)" href="https://apps.apple.com/us/app/hoshi-reader/id6758244332" description="Japanese EPUB reader with pop-up dictionary and Anki card creation" />
+  <Card title="jidoujisho (Android)" href="https://github.com/lrorpilla/jidoujisho" description="Mobile video player, reader assistant and card creation toolkit for Android" />
 </Cards>
 
 <div className="guide-divider" />
@@ -247,6 +308,10 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
 <Cards>
   <Card title="VNDB" href="https://vndb.org/" description="Complete database of visual novels — use to find titles and check language" />
   <Card title="NSFW WARNING - Ryuugames" href="https://ryuugames.com/" description="Free VN downloads" />
+  <Card title="RyuuBlogger" href="https://ryuubloggerv2.blogspot.com/" description="Another large source of free VN downloads" />
+  <Card title="Nyaa.si (VN search)" href="https://nyaa.si/?f=0&c=6_2&q=_" description="SFW visual novels on Nyaa" />
+  <Card title="CraneAnime Upload List" href="https://docs.google.com/spreadsheets/d/1ECqqhEm2kDS0hgxZ0tD_73e04v5FUxQGkfCbfi0Kb9k/pubhtml" description="Direct download links to visual novels" />
+  <Card title="Visual Novel Club Resources (VNCR)" href="https://vnclub.org/" description="Curated VN resource page" />
 </Cards>
 
 <span id="vn-tools" className="guide-anchor" />
@@ -254,7 +319,7 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
 #### Tools & Setup
 
 <div className="guide-card">
-  <p>VNs require a <strong>texthooker</strong> setup — a tool that extracts the in-game dialogue and sends it to a browser page where Yomitan can read it. The standard tool is <strong>Textractor</strong>.</p>
+  <p>VNs require a <strong>texthooker</strong> setup — a tool that extracts the in-game dialogue and sends it to a browser page where Yomitan can read it. The standard tool is <strong>Textractor</strong>. A modern alternative is <strong>LunaTranslator</strong>.</p>
   <p>The setup is: Textractor (hooks game text) → Texthooker page in browser (displays text) → Yomitan (hovers on words). Once running, it's seamless.</p>
   <p>You'll also need to set your <strong>system locale to Japanese</strong> for most VNs to run correctly on Windows.</p>
 </div>
@@ -267,7 +332,35 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <Card title="Setup: VN on PC (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupVnOnPC/" description="Full Textractor + Texthooker page setup guide" />
   <Card title="Setup: VN on Android (Lazy Guide)" href="https://lazyguidejp.github.io/jp-lazy-guide/setupVnOnAndroid/" description="How to play and hook VNs on Android" />
   <Card title="Textractor (GitHub)" href="https://github.com/Artikash/Textractor" description="The text extraction tool used with most VNs" />
+  <Card title="LunaTranslator" href="https://docs.lunatranslator.org/en/" description="Modern Textractor alternative with more features" />
+  <Card title="JL" href="https://github.com/rampaa/JL" description="Yomitan/texthooker alternative that works without a browser" />
+  <Card title="Transparent Texthooker Overlay" href="https://github.com/Saplling/transparent-texthooker-overlay" description="Look up words without alt-tabbing or switching monitors" />
+  <Card title="Magpie" href="https://github.com/Blinue/Magpie" description="Seamless fullscreen for VNs on Windows — no exclusive fullscreen needed" />
   <Card title="Android Texthook Guide" href="https://rentry.co/android-texthook" description="Alternative setup if you want the texthooker page on your phone instead of a second monitor" />
+  <Card title="GameSentenceMiner" href="https://github.com/bpwhelan/GameSentenceMiner" description="Easy mining from VNs and games — works with Textractor/Agent and has its own OCR" />
+</Cards>
+
+<div className="guide-divider" />
+
+{/* ── AUDIOBOOKS & PODCASTS ── */}
+<span id="audiobooks" className="guide-anchor" />
+
+<div className="guide-step-header">
+  <div className="guide-step-icon guide-step-icon--blue">🎧</div>
+  <div>
+    <p className="guide-step-title">Audiobooks & Podcasts</p>
+    <p className="guide-step-sub">Pure listening practice — great for shadowing and passive immersion</p>
+  </div>
+</div>
+
+<p className="guide-intro">Listening to Japanese while doing other things (passive immersion) is a powerful supplement to active study. Audiobooks pair well with their text versions for intensive practice.</p>
+
+<Cards>
+  <Card title="TMW Audiobook Collections" href="https://nyaa.si/?f=0&c=2_0&q=TMW" description="Large collection of Japanese audiobook torrents" />
+  <Card title="TMW Audiobook Collection Index" href="https://coreaudio.netlify.app/" description="Searchable index of the audiobook collection" />
+  <Card title="TMW Audiobook Subtitles" href="https://honjimaku.com/" description="Transcripts/subtitles for the audiobook collection" />
+  <Card title="Japanese Podcast Spreadsheet" href="https://docs.google.com/spreadsheets/d/17P2dBQHnBnHcG3ua_24IO6sP9RDC-5b3WHV9Ri2N5qU/edit#gid=0" description="Community-curated list of Japanese podcasts by difficulty and topic" />
+  <Card title="Condensed Audio Catalog" href="https://condensedaudiocatalog.com/" description="Pre-made condensed audio from anime — ideal for passive listening" />
 </Cards>
 
 <div className="guide-divider" />
@@ -289,12 +382,17 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
 
 <div className="guide-card">
   <p>Start with <strong>Kaishi 1.5k</strong> — a curated deck of 1,500 high-frequency words, each with audio and example sentences. It's the community's recommended beginner deck and replaces older options like Core 2k/6k. Once you're immersing, you'll supplement or replace it with your own mined cards.</p>
+  <p>For note types, <strong>Lapis</strong> is the current community recommendation — elegant, simple, and easy to set up. <strong>Kiku</strong> is a more feature-rich alternative.</p>
 </div>
 
 <Cards>
   <Card title="Kaishi 1.5k" href="https://github.com/donkuri/kaishi" description="Best beginner Anki deck — 1,500 high-frequency words with audio" />
   <Card title="Anki Tutorial" href="https://www.youtube.com/watch?v=DcY2Svs3h8M" description="How to set up Anki and use it effectively" />
   <Card title="Lazy Guide Deck Resources" href="https://lazyguidejp.github.io/jp-lazy-guide/resourcesDecks/" description="Modern Core 2.3k and Modern Kanken decks" />
+  <Card title="Lapis Note Type" href="https://github.com/donkuri/lapis" description="Recommended Anki note type — elegant and easy to set up" />
+  <Card title="Kiku Note Type" href="https://kiku-docs.vercel.app/" description="Feature-rich Anki note type for mining" />
+  <Card title="AnkiConnect Add-on" href="https://ankiweb.net/shared/info/2055492159" description="Required add-on for Yomitan-to-Anki integration" />
+  <Card title="Review Heatmap" href="https://ankiweb.net/shared/info/1771074083" description="Anki add-on that shows your review history as a GitHub-style heatmap" />
   <Card title="Immersion Tracker Spreadsheet" href="https://docs.google.com/spreadsheets/d/1ilxQY6-bdt6tnjeEMbg8vJZqys7elE-XrQrFaJtW65Y/edit?usp=sharing" description="Log and track your daily immersion hours up to 2035" />
 </Cards>
 
@@ -310,7 +408,26 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <Card title="Jisho" href="https://jisho.org/" description="The most popular JP–EN dictionary online — good for quick lookups" />
   <Card title="Takoboto" href="https://takoboto.jp/" description="Clean dictionary app available on Android and web" />
   <Card title="Weblio" href="https://www.weblio.jp/" description="Japanese–Japanese dictionary — good for going monolingual" />
+  <Card title="Jiten.moe" href="https://jiten.moe/" description="Modern JP dictionary with difficulty analysis and sentence search" />
+  <Card title="OJAD" href="http://www.gavo.t.u-tokyo.ac.jp/ojad/search" description="Online pitch accent dictionary" />
   <Card title="Forvo" href="https://forvo.com/languages/ja/" description="Native speaker audio pronunciation database" />
+  <Card title="shoui Yomitan Dictionary Collection" href="https://learnjapanese.link/dictionaries" description="Comprehensive Yomitan dictionary pack — monolingual and bilingual" />
+</Cards>
+
+<span id="misc-sentence-search" className="guide-anchor" />
+
+#### Sentence Search
+
+<div className="guide-card">
+  <p>These tools let you search for a word or phrase and see it used in real native content — great for checking how a word is actually used, or finding audio examples.</p>
+</div>
+
+<Cards>
+  <Card title="Immersion Kit" href="https://www.immersionkit.com/" description="Search sentences from anime and games with translations" />
+  <Card title="Nadeshiko" href="https://nadeshiko.co" description="Like Immersion Kit but with a larger anime catalog" />
+  <Card title="Youglish" href="https://youglish.com/japanese" description="Find words used naturally in YouTube videos by native speakers" />
+  <Card title="Massif" href="https://massif.la/" description="Sentence search sourced from Syosetu web novels" />
+  <Card title="JPDB.IO" href="https://jpdb.io/" description="Word frequency and difficulty ratings for Japanese media" />
 </Cards>
 
 <span id="misc-guides" className="guide-anchor" />
@@ -321,10 +438,14 @@ import { Cards, Card } from 'fumadocs-ui/components/card';
   <Card title="Lazy Guide" href="https://lazyguidejp.github.io/jp-lazy-guide/" description="Preconfigured, spoonfed setup for all content types — everything in one import" />
   <Card title="Donkuri's Guide" href="https://donkuri.github.io/learn-japanese/" description="Detailed, thorough guide for those who want to understand the why behind everything" />
   <Card title="Ten's Guide" href="https://www.ten.guide/" description="A middle ground — detailed but practical, good overall reference" />
+  <Card title="TheMoeWay Guide" href="https://learnjapanese.moe/guide/" description="Comprehensive immersion-based learning guide" />
   <Card title="Learning to Output" href="https://morg.systems/Learning-to-Output" description="In-depth guide on developing natural speaking and writing" />
   <Card title="Tae Kim's Grammar Guide" href="https://guidetojapanese.org/learn/" description="The classic beginner grammar reference" />
+  <Card title="Japanese Ammo by Misa (Grammar Playlist)" href="https://www.youtube.com/playlist?list=PLd5-Wp_4tLqYZxS5j3g6kbeOfVXlTkr3N" description="Video grammar explanations — good for binging" />
+  <Card title="Cure Dolly's Organic Japanese" href="https://www.youtube.com/playlist?list=PLg9uYxuZf8x_A-vcqqyOFZu06WlhnypWj" description="Alternative grammar approach focused on how Japanese actually works" />
   <Card title="Pitch Accent Overview" href="https://docs.google.com/document/d/1ReBf08JFK4n0PXdOxThAfWuiK9UWVZEWWzeKSECWTQo/edit" description="Short, practical intro to Japanese pitch accent" />
   <Card title="Kuuube Minimal Pairs" href="https://kuuuube.github.io/minimal-pairs/" description="Train your ear to distinguish pitch accent differences" />
+  <Card title="Japanese Media Recommendations List" href="https://docs.google.com/spreadsheets/d/1w42HEKEu2AzZg9K7PI0ma9ICmr2qYEKQ9IF4XxFSnQU/" description="Community spreadsheet of Japanese media with difficulty and genre tags" />
 </Cards>
 
 <div className="guide-divider" />
